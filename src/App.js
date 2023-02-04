@@ -17,7 +17,7 @@ const App = () => {
 	return (
 		<div className={`${darkMode && 'dark'} `}>
 			<Navbar />
-			<div className='flex justify-end pt-8 px-44 flex-wrap items-center lg:max-w-full dark:bg-gray-800'>
+			<div className='flex justify-end flex-none items-center pt-8 px-44 dark:bg-gray-800'>
 				<label className='switch flex'>
 					<input type='checkbox' defaultChecked={darkMode} onClick={() => setDarkMode(!darkMode)} />
 					<span className='slider round'></span>

@@ -5,7 +5,7 @@ const Footer = () => {
 	return (
 		<div>
 			<section className='bg-white dark:bg-gray-800 border-t-2 border-solid border-gray-300'>
-				<div className='max-w-screen-xl px-4 py-12 mx-auto space-y-8 overflow-hidden sm:px-6 lg:px-8'>
+				<div className='w-full px-4 py-12 mx-auto space-y-8 overflow-hidden sm:px-6 lg:px-8'>
 					<nav className='flex flex-wrap justify-center -mx-5 -my-2'>
 						<div className='px-5 py-2'>
 							<Link
