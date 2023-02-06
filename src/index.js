@@ -2,17 +2,13 @@ import React from 'react';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { Provider } from 'react-redux';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { createRoot } from 'react-dom/client';
-import store from './store';
 
 const root = createRoot(document.getElementById('app'));
 root.render(
 	<Router>
-			<Provider store={store}>
-			<App />
-		</Provider>
+			<App/>
 	</Router>
 );
 
