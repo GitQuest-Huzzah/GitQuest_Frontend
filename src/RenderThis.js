@@ -4,20 +4,20 @@ import { PlayerProfile } from "./PlayerProfile";
 import { QuestLog } from "./QuestLog";
 export const RenderThis = () => {
 	const [query] = useSearchParams();
-	const queryParams = {};
-	query.forEach((value, key) => {
-		queryParams[key] = value;
-	});
+	const decodeQuery = Buffer.from(query.toString(),'base64').toString('utf-8')
+	const parsedQuery = JSON.parse(decodeQuery)
+	console.log(parsedQuery)
+	
 	const cards = {
 		profile: PlayerProfile,
 		questlog: QuestLog,
 	};
 
-	const ComponentToRender = cards[queryParams.component];
+	const ComponentToRender = cards[parsedQuery.component];
 
 	return (
 		<div>
-			<ComponentToRender {...queryParams} />
+			<ComponentToRender {...parsedQuery} />
 		</div>
 	);
 };
