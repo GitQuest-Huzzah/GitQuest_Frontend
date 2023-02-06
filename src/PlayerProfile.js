@@ -1,5 +1,5 @@
 import React from 'react';
-import scroll from './assets/playerscroll.svg';
+import scroll from './assets/playerscroll.svg'
 
 export const PlayerProfile = ({ user, gold, xp, rank }) => {
 	return (
