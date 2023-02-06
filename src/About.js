@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import fanfare from './assets/fanfare.svg';
 
 const About = () => {
@@ -70,6 +69,7 @@ const About = () => {
 								<img
 									className='w-full h-full mb-6 rounded-full'
 									src='https://i.stack.imgur.com/frlIf.png'
+									alt='profile pic'
 								/>
 								<h2 className='text-lg font-bold dark:text-gray-300'>Robert Boles</h2>
 							</div>
@@ -103,6 +103,7 @@ const About = () => {
 								<img
 									className='w-full h-full mb-6 rounded-full'
 									src='https://i.stack.imgur.com/frlIf.png'
+									alt='profile pic'
 								/>
 								<h2 className='text-lg font-bold dark:text-gray-300'>Taylor Race</h2>
 							</div>
@@ -138,6 +139,7 @@ const About = () => {
 								<img
 									className='w-full h-full mb-6 rounded-full'
 									src='https://i.stack.imgur.com/frlIf.png'
+									alt='profile pic'
 								/>
 								<h2 className='text-lg font-bold dark:text-gray-300'>Ramon Marero</h2>
 							</div>
@@ -171,6 +173,7 @@ const About = () => {
 								<img
 									className='w-full h-full mb-6 rounded-full'
 									src='https://i.stack.imgur.com/frlIf.png'
+									alt='profile pic'
 								/>
 								<h2 className='text-lg font-bold dark:text-gray-300'>Kevin Fang</h2>
 							</div>

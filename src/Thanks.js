@@ -26,7 +26,7 @@ const Thanks = () => {
 					</Link>
 				</div>
 				<div className='w-full h-96 sm:w-3/4 lg:w-auto lg:mt-0 mt-20 px-20 flex justify-center'>
-					<img src={diamond} className='' />
+					<img src={diamond} className='' alt='diamond'/>
 				</div>
 			</div>
 		</section>

@@ -24,7 +24,7 @@ const Home = () => {
 								className='relative overflow-hidden rounded-lg shadow-2xl cursor-pointer group'
 								data-rounded='rounded-md'
 								data-rounded-max='rounded-full'>
-								<img src={gqbanner} className='z-10 object-cover w-full h-full' />
+								<img src={gqbanner} className='z-10 object-cover w-full h-full' alt='git quest banner'/>
 							</div>
 						</div>
 						<p className='relative z-20 block mt-6 my-8 text-base text-gray-500 xl:text-xl sm:text-center lg:text-left'>
@@ -52,7 +52,7 @@ const Home = () => {
 					<div className='flex flex-wrap items-center justify-center flex-row p-8 min-w-[18rem] max-md:max-w-[720px]'>
 						<div className='relative flex-none items-center justify-center px-5 py-5 my-8 mx-4 w-[20rem] h-[34rem] md:flex-none box-border border-solid border-2 border-gray-300 rounded-3xl'>
 							<div className='mb-3 flex justify-center'>
-								<img className='w-64 h-64 rounded-full border-2 bg-[#A3CFA7] border-gray-300 dark:border-white' src={teamwork} />
+								<img className='w-64 h-64 rounded-full border-2 bg-[#A3CFA7] border-gray-300 dark:border-white' src={teamwork} alt='teamwork'/>
 							</div>
 							<h3 className='mt-0 mb-2 text-xl tracking-normal box-border text-center font-semibold dark:text-gray-500'>
 								{' '}
@@ -67,7 +67,7 @@ const Home = () => {
 						</div>
 						<div className='relative flex-none items-center justify-center px-5 py-5 my-8 mx-4  w-[20rem] h-[34rem] md:flex-none box-border border-solid border-2 border-gray-300 rounded-3xl'>
 							<div className='mb-3 flex justify-center'>
-								<img className='w-64 h-64 rounded-full border-2 border-gray-300 dark:border-white' src={productivity} />
+								<img className='w-64 h-64 rounded-full border-2 border-gray-300 dark:border-white' src={productivity} alt='productivity'/>
 							</div>
 							<h3 className='mt-0 mb-2 text-xl tracking-normal box-border text-center font-semibold dark:text-gray-500'>
 								{' '}
@@ -82,7 +82,7 @@ const Home = () => {
 						</div>
 						<div className='relative flex-none items-center justify-center px-5 py-5 my-8 mx-4  w-[20rem] h-[34rem] md:flex-none box-border border-solid border-2 border-gray-300 rounded-3xl'>
 							<div className='mb-3 flex justify-center'>
-								<img className='w-64 h-64 rounded-full border-2 border-gray-300 dark:border-white' src={collaboration} />
+								<img className='w-64 h-64 rounded-full border-2 border-gray-300 dark:border-white' src={collaboration} alt='collaboration' />
 							</div>
 							<h3 className='mt-0 mb-2 text-xl tracking-normal box-border text-center font-semibold dark:text-gray-500'>
 								{' '}
@@ -98,7 +98,7 @@ const Home = () => {
 						</div>
 						<div className='relative flex-none items-center justify-center px-5 py-5 my-8 mx-4  w-[20rem] h-[34rem] md:flex-none box-border border-solid border-2 border-gray-300 rounded-3xl'>
 							<div className='mb-3 flex justify-center'>
-								<img className='w-64 h-64 rounded-full border-2 border-gray-300 dark:border-white' src={integration} />
+								<img className='w-64 h-64 rounded-full border-2 border-gray-300 dark:border-white' src={integration} alt='integration'/>
 							</div>
 							<h3 className='mt-0 mb-2 text-xl tracking-normal box-border text-center font-semibold dark:text-gray-500'>
 								{' '}

@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import scroll from './assets/scroll.svg';
-import gqfavicon from './assets/gqfavicon.svg';
 
 const Contact = () => {
 	return (
