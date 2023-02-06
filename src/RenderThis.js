@@ -2,6 +2,7 @@ import React from "react";
 import { useSearchParams } from "react-router-dom";
 import { PlayerProfile } from "./PlayerProfile";
 import { QuestLog } from "./QuestLog";
+import { Buffer } from 'buffer/';
 export const RenderThis = () => {
 	const [query] = useSearchParams();
 	const decodeQuery = Buffer.from(query.toString(),'base64').toString('utf-8')
