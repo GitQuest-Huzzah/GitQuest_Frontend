@@ -4,6 +4,8 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { createRoot } from 'react-dom/client';
+import store from './store';
+window.Buffer = require('buffer/').Buffer;
 
 const root = createRoot(document.getElementById('app'));
 root.render(
