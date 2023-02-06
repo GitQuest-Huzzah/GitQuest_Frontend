@@ -32,7 +32,7 @@ const About = () => {
 							<div className='flex flex-col items-center justify-center p-5'>
 								<img
 									className='w-full h-full mb-6 rounded-full'
-									src='https://i.stack.imgur.com/frlIf.png'
+									src='https://storage.googleapis.com/slackphotos/CorbinGQ.png'
 									alt='profile pic'
 								/>
 								<h2 className='text-lg font-bold dark:text-gray-300'>
@@ -172,7 +172,7 @@ const About = () => {
 							<div className='flex flex-col items-center justify-center p-5'>
 								<img
 									className='w-full h-full mb-6 rounded-full'
-									src='https://i.stack.imgur.com/frlIf.png'
+									src='https://storage.googleapis.com/slackphotos/KevinGQ.JPG'
 									alt='profile pic'
 								/>
 								<h2 className='text-lg font-bold dark:text-gray-300'>Kevin Fang</h2>
