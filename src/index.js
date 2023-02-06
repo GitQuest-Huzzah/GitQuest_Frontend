@@ -3,16 +3,14 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter as Router } from 'react-router-dom';
-import { Provider } from 'react-redux';
 import { createRoot } from 'react-dom/client';
 import store from './store';
 window.Buffer = require('buffer/').Buffer;
+
 const root = createRoot(document.getElementById('app'));
 root.render(
 	<Router>
-		<Provider store={store}>
 			<App />
-		</Provider>
 	</Router>
 );
 
