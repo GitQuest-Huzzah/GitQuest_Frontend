@@ -4,7 +4,7 @@ import gqlogo from './assets/gqlogo.svg';
 
 const Navbar = () => {
 	return (
-		<section className='w-full px-8 text-gray-700 bg-white dark:bg-gray-800 border-solid border-b-2 border-gray-300'>
+		<section className='w-full px-8 text-gray-700 bg-white dark:bg-gray-800 border-solid border-b-2 border-gray-400'>
 			<div className='flex flex-col flex-wrap items-center justify-between py-6 mx-auto md:flex-row lg:max-w-[87rem]'>
 				<div className='relative flex flex-col md:flex-row'>
 					<Link
@@ -16,14 +16,17 @@ const Navbar = () => {
 				<div className='inline-flex flex-col items-center sm:flex-row sm:ml-5 lg:justify-end'>
 					<nav className='flex flex-wrap items-center space-x-4 text-xl font-semibold tracking-wide uppercase sm:space-x-6'>
 						{/*  focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900 */}
-						<Link to='/home' className='text-gray-400 hover:text-gray-500'>
+						<Link to='/home' className='text-gray-400 hover:text-gray-500 uppercase'>
 							Home
 						</Link>
-						<Link to='/about' className='text-gray-400 hover:text-gray-500'>
+						<Link to='/about' className='text-gray-400 hover:text-gray-500 uppercase'>
 							About
 						</Link>
-						<Link to='/contact' className='text-gray-400 hover:text-gray-500'>
+						<Link to='/contact' className='text-gray-400 hover:text-gray-500 uppercase'>
 							Contact
+						</Link>
+						<Link to='/faq' className='text-gray-400 hover:text-gray-500 uppercase'>
+							FAQ
 						</Link>
 					</nav>
 					<Link

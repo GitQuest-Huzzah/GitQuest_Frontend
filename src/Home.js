@@ -10,10 +10,10 @@ const Home = () => {
 	return (
 		<div className='dark:bg-gray-800'>
 			<section className='relative flex flex-col items-center justify-center w-full px-6 pb-6 bg-white dark:bg-gray-800 bg-cover'>
-				<div className='flex flex-col items-center justify-center mx-auto sm:p-3 xl:pb-4 xl:px-4 lg:flex-row lg:max-w-[87rem] w-[85%] lg:p-0'>
+				<div className='flex flex-col items-center justify-center mx-auto sm:p-3 xl:pb-4 xl:px-4 lg:flex-row lg:max-w-[87rem] w-full lg:p-0'>
 					<div className='container relative z-20 flex flex-col justify-center items-center w-full pb-1 mb-16 text-2xl text-gray-700 lg:w-full  sm:items-center lg:items-start lg:mb-0'>
 						<h1
-							className='relative z-20 text-5xl my-8 font-extrabold leading-none text-purple-500 xl:text-6xl sm:text-center lg:text-left'
+							className='relative z-20 text-5xl my-8 font-extrabold leading-none xl:text-6xl sm:text-center lg:text-left'
 							data-primary='purple-500'>
 							<span className='mt-1 text-gray-800 dark:text-gray-500 lg:mt-0'>
 								Join the Adventure with GitQuest - Your GitHub Companion!
@@ -50,9 +50,9 @@ const Home = () => {
 			<section className='pt-12 pb-8 leading-7 text-gray-900 bg-white dark:bg-gray-800 border-b border-solid md:pt-6 md:pb-12 box-border border-slate-100 2xl:pb-8'>
 				<div className='relative px-4 mx-1 w-full text-gray-900 box-border'>
 					<div className='flex flex-wrap items-center justify-center flex-row p-8 min-w-[18rem] max-md:max-w-[720px]'>
-						<div className='relative flex-none items-center justify-center px-5 py-5 my-8 mx-4 w-[20rem] h-[34rem] md:flex-none box-border border-solid border-2 border-gray-300 rounded-3xl'>
+						<div className='relative flex-none items-center justify-center px-5 py-5 my-8 mx-4 w-[20rem] h-[34rem] md:flex-none box-border border-solid border-2 border-gray-400 rounded-3xl'>
 							<div className='mb-3 flex justify-center'>
-								<img className='w-64 h-64 rounded-full border-2 bg-[#A3CFA7] border-gray-300 dark:border-white' src={teamwork} alt='teamwork'/>
+								<img className='w-64 h-64 rounded-full border-2 bg-[#A3CFA7] border-gray-400 dark:border-white' src={teamwork} alt='teamwork'/>
 							</div>
 							<h3 className='mt-0 mb-2 text-xl tracking-normal box-border text-center font-semibold dark:text-gray-500'>
 								{' '}
@@ -65,9 +65,9 @@ const Home = () => {
 								heights and tackle each task with determination.{' '}
 							</p>
 						</div>
-						<div className='relative flex-none items-center justify-center px-5 py-5 my-8 mx-4  w-[20rem] h-[34rem] md:flex-none box-border border-solid border-2 border-gray-300 rounded-3xl'>
+						<div className='relative flex-none items-center justify-center px-5 py-5 my-8 mx-4  w-[20rem] h-[34rem] md:flex-none box-border border-solid border-2 border-gray-400 rounded-3xl'>
 							<div className='mb-3 flex justify-center'>
-								<img className='w-64 h-64 rounded-full border-2 border-gray-300 dark:border-white' src={productivity} alt='productivity'/>
+								<img className='w-64 h-64 rounded-full border-2 border-gray-400 dark:border-white' src={productivity} alt='productivity'/>
 							</div>
 							<h3 className='mt-0 mb-2 text-xl tracking-normal box-border text-center font-semibold dark:text-gray-500'>
 								{' '}
@@ -80,9 +80,9 @@ const Home = () => {
 								harder and more efficiently as they strive for glory.{' '}
 							</p>
 						</div>
-						<div className='relative flex-none items-center justify-center px-5 py-5 my-8 mx-4  w-[20rem] h-[34rem] md:flex-none box-border border-solid border-2 border-gray-300 rounded-3xl'>
+						<div className='relative flex-none items-center justify-center px-5 py-5 my-8 mx-4  w-[20rem] h-[34rem] md:flex-none box-border border-solid border-2 border-gray-400 rounded-3xl'>
 							<div className='mb-3 flex justify-center'>
-								<img className='w-64 h-64 rounded-full border-2 border-gray-300 dark:border-white' src={collaboration} alt='collaboration' />
+								<img className='w-64 h-64 rounded-full border-2 border-gray-400 dark:border-white' src={collaboration} alt='collaboration' />
 							</div>
 							<h3 className='mt-0 mb-2 text-xl tracking-normal box-border text-center font-semibold dark:text-gray-500'>
 								{' '}
@@ -96,9 +96,9 @@ const Home = () => {
 								before!{' '}
 							</p>
 						</div>
-						<div className='relative flex-none items-center justify-center px-5 py-5 my-8 mx-4  w-[20rem] h-[34rem] md:flex-none box-border border-solid border-2 border-gray-300 rounded-3xl'>
+						<div className='relative flex-none items-center justify-center px-5 py-5 my-8 mx-4  w-[20rem] h-[34rem] md:flex-none box-border border-solid border-2 border-gray-400 rounded-3xl'>
 							<div className='mb-3 flex justify-center'>
-								<img className='w-64 h-64 rounded-full border-2 border-gray-300 dark:border-white' src={integration} alt='integration'/>
+								<img className='w-64 h-64 rounded-full border-2 border-gray-400 dark:border-white' src={integration} alt='integration'/>
 							</div>
 							<h3 className='mt-0 mb-2 text-xl tracking-normal box-border text-center font-semibold dark:text-gray-500'>
 								{' '}

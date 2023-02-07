@@ -31,7 +31,7 @@ const SignUp = () => {
 					<form className='flex flex-wrap justify-center items-center flex-col w-full mx-auto'>
 						<input
 							type='text'
-							className='flex min-w-full px-5 py-5 text-2xl bg-gray-200 border border-gray-300 rounded-full focus:ring-4 focus:ring-black dark:focus:ring-white focus:ring-opacity-50 focus:ring-offset-2 focus:outline-none'
+							className='flex min-w-full px-5 py-5 text-2xl bg-gray-200 border border-gray-400 rounded-full focus:ring-4 focus:ring-black dark:focus:ring-white focus:ring-opacity-50 focus:ring-offset-2 focus:outline-none'
 							data-primary='black'
 							data-rounded='rounded-lg'
 							placeholder='Email Address'
