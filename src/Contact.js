@@ -1,8 +1,24 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, {useRef} from 'react';
+import { useNavigate } from 'react-router-dom';
 import scroll from './assets/scroll.svg';
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
+	const form = useRef();
+	const navigate = useNavigate();
+	
+		const sendEmail = (e) => {
+			e.preventDefault();
+	
+			emailjs.sendForm('service_e687x2d', 'template_1r2fbuv', form.current, 'tVzwh_ihXx0CdpzBa')
+			.then((result) => {
+					console.log(result.text);
+			}, (error) => {
+					console.log(error.text);
+			});
+			navigate('/thankyou')
+	};
+
 	return (
 		<div className='py-10 bg-white md:py-16 dark:bg-gray-800 h-full'>
 			<div className='flex flex-col items-center justify-center mx-auto sm:p-3 xl:pb-4 xl:px-4 lg:max-w-[87rem] lg:p-0'>
@@ -25,7 +41,7 @@ const Contact = () => {
 						</div>
 					</div>
 				</div>
-				<form className='grid w-3/4 gap-4 mx-auto sm:grid-cols-2'>
+				<form ref={form} onSubmit={sendEmail} className='grid w-3/4 gap-4 mx-auto sm:grid-cols-2'>
 					<div>
 						<label
 							htmlFor='first-name'
@@ -33,7 +49,7 @@ const Contact = () => {
 							First name
 						</label>
 						<input
-							name='first-name'
+							name='first_name'
 							className='w-full px-3 py-2 text-gray-800 transition duration-100 border rounded-full outline-none bg-gray-50 focus:ring-4 focus:ring-black dark:focus:ring-white focus:ring-opacity-50 focus:ring-offset-2 focus:outline-none'
 						/>
 					</div>
@@ -45,7 +61,7 @@ const Contact = () => {
 							Last name
 						</label>
 						<input
-							name='last-name'
+							name='last_name'
 							className='w-full px-3 py-2 text-gray-800 transition duration-100 border rounded-full outline-none bg-gray-50 focus:ring-4 focus:ring-black dark:focus:ring-white focus:ring-opacity-50 focus:ring-offset-2 focus:outline-none'
 						/>
 					</div>
@@ -57,7 +73,7 @@ const Contact = () => {
 							Email
 						</label>
 						<input
-							name='email'
+							name='user_email'
 							className='w-full px-3 py-2 text-gray-800 transition duration-100 border rounded-full outline-none bg-gray-50 focus:ring-4 focus:ring-black dark:focus:ring-white focus:ring-opacity-50 focus:ring-offset-2 focus:outline-none'
 						/>
 					</div>
@@ -70,6 +86,7 @@ const Contact = () => {
 						</label>
 						<input
 							name='subject'
+							id='subject'
 							className='w-full px-3 py-2 text-gray-800 transition duration-100 border rounded-full outline-none bg-gray-50 focus:ring-4 focus:ring-black dark:focus:ring-white focus:ring-opacity-50 focus:ring-offset-2 focus:outline-none'
 						/>
 					</div>
@@ -82,16 +99,16 @@ const Contact = () => {
 						</label>
 						<textarea
 							name='message'
+							id='message'
 							className='w-full h-64 px-3 py-2 text-gray-800 transition duration-100 border rounded-lg outline-none bg-gray-50 focus:ring-4 focus:ring-black dark:focus:ring-white focus:ring-opacity-50 focus:ring-offset-2 focus:outline-none'></textarea>
 					</div>
 					<div className='flex items-center justify-center sm:col-span-2'>
-						<Link
-							to='/thankyou'
+						<input
+							type="submit"
+							value="Submit"
 							className='inline-flex tracking-wide uppercase text-xl items-center sm:mt-0 mt-5 justify-center px-5 py-2.5 font-semibold text-white bg-gray-800 dark:bg-gray-600 border border-transparent shadow-sm hover:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900 2xl:rounded-full 2xl:border-transparent 2xl:bg-gray-800 rounded-full'
 							data-primary='black'
-							data-rounded='rounded-full'>
-							Submit
-						</Link>
+							data-rounded='rounded-full'/>
 					</div>
 				</form>
 				<p className='w-3/4 mx-auto mt-5 text-xs text-gray-400'>
