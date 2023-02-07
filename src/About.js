@@ -8,7 +8,7 @@ const About = () => {
 				<div className='space-y-12'>
 					<div className='w-full px-20 pb-10 flex flex-col justify-center'>
 						<img alt='fanfare' src={fanfare} className='w-auto h-64 m-8' />
-						<h2 className='relative m-8 text-4xl font-extrabold tracking-tight sm:text-5xl dark:text-gray-300 text-center'>
+						<h2 className='relative m-8 text-4xl font-extrabold tracking-tight sm:text-5xl dark:text-gray-500 text-center'>
 							Meet the GitQuest Team!
 						</h2>
 						<p className='text-xl text-gray-500 break-normal'>

@@ -9,7 +9,6 @@ const SignUp = () => {
 
   const sendEmail = (e) => {
     e.preventDefault();
-
     emailjs
       .sendForm(
         "service_e687x2d",

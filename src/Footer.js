@@ -4,28 +4,35 @@ import { Link } from 'react-router-dom';
 const Footer = () => {
 	return (
 		<div>
-			<section className='bg-white dark:bg-gray-800 border-t-2 border-solid border-gray-300'>
+			<section className='bg-white dark:bg-gray-800 border-t-2 border-solid border-gray-400'>
 				<div className='w-full px-4 py-12 mx-auto space-y-8 overflow-hidden sm:px-6 lg:px-8'>
 					<nav className='flex flex-wrap justify-center -mx-5 -my-2'>
 						<div className='px-5 py-2'>
 							<Link
 								to='/home'
-								className='text-xl leading-6 text-gray-500 hover:text-gray-900'>
+								className='text-xl leading-6 text-gray-400 hover:text-gray-500 uppercase'>
 								HOME
 							</Link>
 						</div>
 						<div className='px-5 py-2'>
 							<Link
 								to='/about'
-								className='text-xl leading-6 text-gray-500 hover:text-gray-900'>
+								className='text-xl leading-6 text-gray-400 hover:text-gray-500 uppercase'>
 								ABOUT
 							</Link>
 						</div>
 						<div className='px-5 py-2'>
 							<Link
 								to='/contact'
-								className='text-xl leading-6 text-gray-500 hover:text-gray-900'>
+								className='text-xl leading-6 text-gray-400 hover:text-gray-500 uppercase'>
 								CONTACT
+							</Link>
+						</div>
+						<div className='px-5 py-2'>
+							<Link
+								to='/faq'
+								className='text-xl leading-6 text-gray-400 hover:text-gray-500 uppercase'>
+								FAQ
 							</Link>
 						</div>
 					</nav>
