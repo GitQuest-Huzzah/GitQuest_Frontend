@@ -68,7 +68,7 @@ const About = () => {
 							<div className='flex flex-col items-center justify-center p-5'>
 								<img
 									className='w-full h-full mb-6 rounded-full'
-									src='https://i.stack.imgur.com/frlIf.png'
+									src='https://storage.googleapis.com/slackphotos/BobGQ.jpg'
 									alt='profile pic'
 								/>
 								<h2 className='text-lg font-bold dark:text-gray-300'>Robert Boles</h2>
