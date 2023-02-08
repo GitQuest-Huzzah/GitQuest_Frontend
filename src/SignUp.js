@@ -1,3 +1,4 @@
+
 import React, { useRef, useState } from "react";
 import gqfavicon from "./assets/gqfavicon.svg";
 import emailjs from "@emailjs/browser";
@@ -11,10 +12,10 @@ const SignUp = () => {
 		e.preventDefault();
 		emailjs
 			.sendForm(
-				"service_e687x2d",
-				"template_l1qdtdl",
+				'service_e687x2d',
+				'template_l1qdtdl',
 				form.current,
-				"tVzwh_ihXx0CdpzBa"
+				'tVzwh_ihXx0CdpzBa'
 			)
 			.then(
 				(result) => {
