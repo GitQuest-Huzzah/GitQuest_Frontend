@@ -1,14 +1,14 @@
-import React from 'react';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
-import { BrowserRouter as Router } from 'react-router-dom';
-import { createRoot } from 'react-dom/client';
+import React from "react";
+import "./index.css";
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
+import { BrowserRouter as Router } from "react-router-dom";
+import { createRoot } from "react-dom/client";
 
-const root = createRoot(document.getElementById('app'));
+const root = createRoot(document.getElementById("app"));
 root.render(
 	<Router>
-			<App/>
+		<App />
 	</Router>
 );
 
