@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import scroll from './assets/namescroll.svg';
 import goldshield from './assets/goldshield.svg';
