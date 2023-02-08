@@ -56,8 +56,7 @@ export const PlayerProfile = ({ user, gold, reward, xp, level, rank }) => {
 							className='h-36 w-36 mx-auto text-4xl text-center font-extrabold p-auto flex justify-center items-center'
 							alt='xpshield'></img>
 						<div className='text-3xl absolute text-yellow-400 top-16 left-0 right-0 bottom-0  font-medieval tracking-widest'>
-							{/* {level} */}
-							{xp}
+							{level}
 						</div>
 					</div>
 					<div className='relative'>
@@ -86,8 +85,7 @@ export const PlayerProfile = ({ user, gold, reward, xp, level, rank }) => {
 							className='h-36 w-36 mx-auto text-4xl text-center font-extrabold p-auto flex justify-center items-center'
 							alt='xpshield'></img>
 						<div className='text-3xl absolute text-yellow-400 top-16 left-0 right-0 bottom-0 font-medieval tracking-widest'>
-							{/* {reward} */}
-							{gold}
+							{reward}
 						</div>
 					</div>
 				</div>
