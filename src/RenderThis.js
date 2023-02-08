@@ -7,7 +7,6 @@ export const RenderThis = () => {
 	const [query] = useSearchParams();
 	const decodeQuery = Buffer.from(query.toString(), "base64").toString("utf-8");
 	const parsedQuery = JSON.parse(decodeQuery);
-	console.log(parsedQuery);
 
 	const cards = {
 		profile: PlayerProfile,

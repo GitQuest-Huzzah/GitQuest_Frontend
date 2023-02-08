@@ -5,7 +5,6 @@ import FAQ from "./FAQ";
 const FAQPage = () => {
   const [query] = useSearchParams();
   const isInstalled = query.get("installed");
-  console.log(isInstalled === "successful", "this equals true");
 
   return (
     <>
