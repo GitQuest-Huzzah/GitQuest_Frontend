@@ -15,7 +15,7 @@ const FAQPage = () => {
           </h2>
         ) : (
           <h2 className="mb-2 text-xl font-bold text-center md:text-3xl text-black dark:text-red-500 uppercase">
-            GitQuest installation failed. Please contact us for help
+            GitQuest installation failed! Please contact us for help
           </h2>
         )
       ) : null}
