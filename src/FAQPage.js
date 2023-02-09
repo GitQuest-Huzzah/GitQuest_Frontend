@@ -78,49 +78,25 @@ const FAQPage = () => {
                     you through the easy steps!
                   </li>
                   <li>
-                    <ul className="ml-5">
+                    <ol className="ml-5">
                       <li className="list-decimal ml-5">
-                        Add or Update your organization name (this should match
+                        Set your organization name (this should match
                         what is on GitHub)
                       </li>
                       <li className="list-decimal ml-5">
-                        Click the button to Link Org to GitHub. This will
+                        Click the button to Connect to GitHub. This will
                         authorize GitQuest to view information from GH.
                       </li>
                       <li className="list-decimal ml-5">
-                        Use the “Repos to Connect” button to select which
-                        repositories you’d like GitQuest to track. You may later
-                        delete unwanted repositories using the “Repos to Delete”
-                        button.
+                        Now, you can connect users (matches Slack user to GitHub user account) and select which repositories for GitQuest to track.
                       </li>
-                      <li className="list-decimal ml-5">
-                        Use the “Link Users to Github” button to choose which
-                        Slack users you’d like to be included in GitQuest.
-                      </li>
-                    </ul>
+                    </ol>
                   </li>
 
                   <li className="list-disc">
                     Your organization is ready to join the adventure! As an
                     administrator, you can now Add Quests for your team to
                     claim. Read more about Quests in our FAQ section.
-                  </li>
-                </ul>
-              }
-            />
-            <FAQ
-              question="What are Quests?"
-              answer={
-                <ul>
-                  <li className="list-disc">
-                    Users can complete quests to gain rewards! Quests are a fun
-                    way to transform team coding tasks and features into
-                    rewarding journeys. Much like a ticketing system, your
-                    organization’s admin can post a quest which will then be
-                    claimed by a user. Each quest will ultimately be tied to a
-                    pull request that is made. GitQuest reviews the
-                    corresponding metrics within that PR to award the user with
-                    experience points.
                   </li>
                 </ul>
               }
