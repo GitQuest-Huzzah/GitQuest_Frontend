@@ -7,9 +7,9 @@ export const QuestActivity = ({ activityStats }) => {
 		drawChart();
 	},[]);
 
-	const width = 1000;
-	const height = 700;
-	const margin = { top: 20, bottom: 50, left: 50, right: 50 };
+	const width = 500;
+	const height = 300;
+	const margin = { top: 20, bottom: 30, left: 50, right: 50 };
 	const drawChart = () => {
 		const svg = d3
 			.select("#chart")
@@ -17,19 +17,19 @@ export const QuestActivity = ({ activityStats }) => {
 			.attr("height", height - margin.top - margin.bottom)
 			.attr("width", width - margin.left - margin.right)
 			.attr("viewBox", [0, 0, width, height])
-			.style('border', '4px solid crimson')
-			.style('border-radius','10px')
-			.attr('transform', `translate(${margin.left},0)`)
+			// .style('border', '4px solid crimson')
+			.style('border-radius','3px')
 
 		svg.append('image')
 			.attr('xlink:href', background)
-			.attr('width',1100)
-			.attr('height', 1110)
-
+			.attr('width',580)
+			.attr('height',580)
+			.attr("transform","translate(-15,-5)")
+			
 		const x = d3.scaleBand()
 			.domain(d3.range(activityStats.length))		
 			.range([margin.left, width - margin.right])
-			.padding(0.1);
+			.padding(0.15);
 
 		const y = d3.scaleLinear()
 			.domain([0,15])
@@ -50,14 +50,18 @@ export const QuestActivity = ({ activityStats }) => {
 		const xAxis = (g) => {
 			g.attr('transform', `translate(0, ${height - margin.bottom})`)
 			.call(d3.axisBottom(x).tickFormat(i => activityStats[i].name))
-			.attr('font-size', '1.5rem')
+			.attr('font-size', '1em')
+			.attr('color', 'crimson')
+			.selectAll('.tick text')
+			.attr('transform', `rotate(15)`)
 			.attr('color', 'goldenrod')
 			.attr('font-family', 'MedievalTimes')
+
 		}
 		const yAxis = (g) => {
 			g.attr('transform', `translate(${margin.left},0)`)
 			.call(d3.axisLeft(y).ticks(null, activityStats.format))
-			.attr('font-size', '1.5rem')
+			.attr('font-size', '1.5em')
 			.attr('color', 'goldenrod')
 			.attr('font-family', 'MedievalTimes')
 		}

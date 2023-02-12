@@ -153,5 +153,5 @@ input:not(:checked) + .slider:before {
 }
 
 .chart {
-	color:goldenrod;
+	color:darkgoldenrod
 }
