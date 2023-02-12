@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 @import url(./dist/output.css);
-
 body {
 	margin: 0;
 	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -154,5 +153,5 @@ input:not(:checked) + .slider:before {
 }
 
 .chart {
-	color:red
+	color:goldenrod;
 }
