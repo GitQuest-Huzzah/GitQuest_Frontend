@@ -1,7 +1,7 @@
 import React from "react";
 import { useSearchParams } from "react-router-dom";
 import { PlayerProfile } from "./PlayerProfile";
-import { QuestLog } from "./QuestLog";
+import { QuestActivity } from "./QuestActivity";
 import { Buffer } from "buffer/";
 export const RenderThis = () => {
 	const [query] = useSearchParams();
@@ -10,7 +10,7 @@ export const RenderThis = () => {
 
 	const cards = {
 		profile: PlayerProfile,
-		questlog: QuestLog,
+		questActivity: QuestActivity,
 	};
 
 	const ComponentToRender = cards[parsedQuery.component];
