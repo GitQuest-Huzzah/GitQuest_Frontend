@@ -1,12 +1,11 @@
 import React, { useEffect } from "react";
-import * as d3 from "d3";
-
-export const TestChart = () => {
+import * as d3 from 'd3';
+export const QuestActivity = ({activityStats}) => {
 	useEffect(() => {
 		drawChart();
 	});
 	const drawChart = () => {
-		const data = { corbin: 12, bob: 5, taylor: 6, kevin: 6, ramon: 9 };
+		const data = activityStats
 		const labels = Object.keys(data);
 		const totals = Object.values(data);
 		const svg = d3
@@ -36,3 +35,10 @@ export const TestChart = () => {
 	};
 	return <div id={"chart"}></div>;
 };
+// 	return (
+// 		<div className="w-full mx-auto text-4xl font-extrabold leading-none text-lef  sm:text-5xl md:text-7xl text-gray-500 uppercase p-20">
+// 			hello world
+// 			{Object.entries(activityStats).map(([key,value]) => <div>{key},{value}</div>)}
+// 		</div>
+// 	);
+// };
