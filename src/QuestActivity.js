@@ -9,7 +9,7 @@ export const QuestActivity = ({ activityStats }) => {
 
 	const width = 700;
 	const height = 400;
-	const margin = { top: 10, bottom: 25, left: 50, right: 50 };
+	const margin = { top: 50, bottom: 25, left: 80, right: 50 };
 	const drawChart = () => {
 		const svg = d3
 			.select(".chart")
@@ -19,12 +19,13 @@ export const QuestActivity = ({ activityStats }) => {
 			.attr("viewBox", [0, 0, width, height])
 			.style('border', '4px solid crimson')
 			.style('border-radius','10px')
+			.attr('class', 'h-[31rem] w-auto flex')
 
 		svg.append('image')
 			.attr('xlink:href', background)
-			.attr('width',1500)
+			.attr('width',500)
 			.attr('height', 500)
-			.attr('x', -500)
+			.attr('class', 'h-auto w-[50rem] flex')
 
 		const x = d3.scaleBand()
 			.domain(d3.range(activityStats.length))		
@@ -49,7 +50,7 @@ export const QuestActivity = ({ activityStats }) => {
 		const xAxis = (g) => {
 			g.attr('transform', `translate(0, ${height - margin.bottom})`)
 			.call(d3.axisBottom(x).tickFormat(i => activityStats[i].name))
-			.attr('font-size', '0.75em')
+			.attr('font-size', '1em')
 			.attr('font-family', 'MedievalTimes')
 		}
 		const yAxis = (g) => {
