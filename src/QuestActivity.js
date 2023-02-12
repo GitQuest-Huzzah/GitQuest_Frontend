@@ -19,13 +19,13 @@ export const QuestActivity = ({ activityStats }) => {
 			.attr("viewBox", [0, 0, width, height])
 			.style('border', '4px solid crimson')
 			.style('border-radius','10px')
-			.attr('class', 'h-[31rem] w-auto flex')
+			.attr('class', 'h-[100vh] w-[100vw] flex')
 
 		svg.append('image')
 			.attr('xlink:href', background)
-			.attr('width',500)
+			.attr('width',600)
 			.attr('height', 500)
-			.attr('class', 'h-auto w-[50rem] flex')
+			.attr('class', 'h-auto w-[100vw] flex')
 
 		const x = d3.scaleBand()
 			.domain(d3.range(activityStats.length))		
