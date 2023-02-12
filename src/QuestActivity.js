@@ -9,8 +9,8 @@ export const QuestActivity = ({ activityStats }) => {
 		drawChart();
 	},[]);
 
-	const width = 350;
-	const height = 350;
+	const width = 400;
+	const height = 500;
 	const margin = { top: 70, bottom: 30, left: 50, right: 50 };
 	const drawChart = () => {
 		const svg = d3
@@ -21,6 +21,7 @@ export const QuestActivity = ({ activityStats }) => {
 			.attr("viewBox", [0, 0, width, height])
 			.style('border-radius','3px')
 			.attr("transform","translate(0,-40)")
+			.attr('class', 'h-[31rem] w-auto')
 
 		svg.append('image')
 			.attr('xlink:href', background)
