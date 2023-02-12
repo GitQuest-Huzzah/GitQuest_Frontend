@@ -7,9 +7,9 @@ export const QuestActivity = ({ activityStats }) => {
 		drawChart();
 	},[]);
 
-	const width = 500;
-	const height = 300;
-	const margin = { top: 0, bottom: 55, left: 50, right: 50 };
+	const width = 700;
+	const height = 400;
+	const margin = { top: 10, bottom: 25, left: 50, right: 50 };
 	const drawChart = () => {
 		const svg = d3
 			.select(".chart")
@@ -61,5 +61,5 @@ export const QuestActivity = ({ activityStats }) => {
 		svg.append('g').call(xAxis);
 		svg.append('g').call(yAxis);
 	};
-	return <div className={"chart h-[31rem] w-[26rem] mx-auto font-extrabold flex justify-center items-center object-cover"}></div>;
+	return <div className={"chart"}></div>;
 };
