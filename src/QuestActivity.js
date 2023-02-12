@@ -9,8 +9,8 @@ export const QuestActivity = ({ activityStats }) => {
 		drawChart();
 	},[]);
 
-	const width = 400;
-	const height = 500;
+	const width = 500;
+	const height = 600;
 	const margin = { top: 70, bottom: 30, left: 50, right: 50 };
 	const drawChart = () => {
 		const svg = d3
@@ -27,7 +27,7 @@ export const QuestActivity = ({ activityStats }) => {
 			.attr('xlink:href', background)
 			.attr('width',580)
 			.attr('height',580)
-			.attr("transform","translate(-15,-5)")
+			.attr("transform","translate(-15,10)")
 			
 		const x = d3.scaleBand()
 			.domain(d3.range(activityStats.length))		
@@ -51,12 +51,15 @@ export const QuestActivity = ({ activityStats }) => {
 
 		const xAxis = (g) => {
 			g.attr('transform', `translate(0, ${height - margin.bottom})`)
-			.call(d3.axisBottom(x).tickFormat(i => activityStats[i].name))
+			.call(d3.axisBottom(x).tickFormat(i => activityStats[i].name.substring(0,3)))
 			.selectAll('.tick text')
+			.attr('rotate',-90)
 			.attr('color', 'goldenrod')
-			.attr('font-size', '1.3em')
+			.attr('writing-mode', 'tb-rl')
+			.attr('font-size', '3.5em')
+			.attr('transform', `rotate(0)translate(50,-90)`)
 			.attr('font-family', 'MedievalTimes')
-			.attr('transform', `rotate(25)translate(0,-20)`)
+			.attr('letter-spacing', '15')
 
 		}
 		const yAxis = (g) => {
