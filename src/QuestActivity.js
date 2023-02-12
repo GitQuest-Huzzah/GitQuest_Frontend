@@ -1,44 +1,41 @@
 import React, { useEffect } from "react";
-import * as d3 from 'd3';
-export const QuestActivity = ({activityStats}) => {
+import * as d3 from "d3";
+export const QuestActivity = ({ activityStats }) => {
 	useEffect(() => {
 		drawChart();
 	});
 	const drawChart = () => {
-		const data = activityStats
-		const labels = Object.keys(data);
-		const totals = Object.values(data);
+		const data = activityStats;
+		const labels = data.map((entry) =>
+			entry.name.concat(": " + entry.questQuantity)
+		);
+		const totals = data.map((entry) => entry.questQuantity);
 		const svg = d3
-			.select("body")
+			.select(".chart")
 			.append("svg")
-			.attr("width", 700)
-			.attr("height", 300);
+			.attr("width", totals.length * 110)
+			.attr("height", totals.length * 100)
+			.style("border", "1px solid white");
 
 		svg
 			.selectAll("rect")
 			.data(totals)
 			.enter()
 			.append("rect")
-			.attr("x", (d, i) => i * 70)
+			.attr("x", (d, i) => i * (40 * totals.length))
 			.attr("y", (d, i) => 300 - 10 * d)
-			.attr("width", 65)
+			.attr("width", 95)
 			.attr("height", (d, i) => d * 10)
-			.attr("fill", "green");
+			.style("fill", "goldenrod");
 		svg
 			.selectAll("text")
+			.style("fill", "white")
 			.data(labels)
 			.enter()
 			.append("text")
 			.text((d) => d)
-			.attr("x", (d, i) => i * 70)
-			.attr("y", (d, i) => 300 - 30);
+			.attr("x", (d, i) => i * (40 * totals.length))
+			.attr("y", (d, i) => 300 - 5);
 	};
-	return <div id={"chart"}></div>;
+	return <div className={"chart"}></div>;
 };
-// 	return (
-// 		<div className="w-full mx-auto text-4xl font-extrabold leading-none text-lef  sm:text-5xl md:text-7xl text-gray-500 uppercase p-20">
-// 			hello world
-// 			{Object.entries(activityStats).map(([key,value]) => <div>{key},{value}</div>)}
-// 		</div>
-// 	);
-// };

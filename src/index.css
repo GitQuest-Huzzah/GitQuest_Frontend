@@ -152,3 +152,7 @@ input:not(:checked) + .slider:before {
 .font-medieval {
 	font-family: 'MedievalTimes';
 }
+
+.chart {
+	color:red
+}
