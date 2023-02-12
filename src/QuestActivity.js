@@ -9,7 +9,7 @@ export const QuestActivity = ({ activityStats }) => {
 
 	const width = 700;
 	const height = 400;
-	const margin = { top: 50, bottom: 25, left: 80, right: 50 };
+	const margin = { top: 10, bottom: 50, left: 40, right: 40 };
 	const drawChart = () => {
 		const svg = d3
 			.select(".chart")
@@ -19,13 +19,11 @@ export const QuestActivity = ({ activityStats }) => {
 			.attr("viewBox", [0, 0, width, height])
 			.style('border', '4px solid crimson')
 			.style('border-radius','10px')
-			.attr('class', 'h-[100vh] w-[100vw] flex')
 
-		svg.append('image')
-			.attr('xlink:href', background)
-			.attr('width',600)
-			.attr('height', 500)
-			.attr('class', 'h-auto w-[100vw] flex')
+		// svg.append('image')
+		// 	.attr('xlink:href', background)
+		// 	.attr('width',500)
+		// 	.attr('height', 500)
 
 		const x = d3.scaleBand()
 			.domain(d3.range(activityStats.length))		
@@ -62,5 +60,5 @@ export const QuestActivity = ({ activityStats }) => {
 		svg.append('g').call(xAxis);
 		svg.append('g').call(yAxis);
 	};
-	return <div className={"chart"}></div>;
+	return <div className='flex justify-center items-center w-fit h-fit'><div className={"chart"}></div></div>;
 };
