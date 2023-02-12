@@ -61,5 +61,5 @@ export const QuestActivity = ({ activityStats }) => {
 		svg.append('g').call(xAxis);
 		svg.append('g').call(yAxis);
 	};
-	return <div className={"chart"}></div>;
+	return <div className={"chart flex justify-center items-center w-[26rem] h-fit"}></div>;
 };
