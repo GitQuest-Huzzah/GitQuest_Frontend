@@ -7,23 +7,24 @@ export const QuestActivity = ({ activityStats }) => {
 		drawChart();
 	},[]);
 
-	const width = 700;
-	const height = 400;
-	const margin = { top: 10, bottom: 50, left: 40, right: 40 };
+	const width = 1000;
+	const height = 700;
+	const margin = { top: 20, bottom: 50, left: 50, right: 50 };
 	const drawChart = () => {
 		const svg = d3
-			.select(".chart")
+			.select("#chart")
 			.append("svg")
 			.attr("height", height - margin.top - margin.bottom)
 			.attr("width", width - margin.left - margin.right)
 			.attr("viewBox", [0, 0, width, height])
 			.style('border', '4px solid crimson')
 			.style('border-radius','10px')
+			.attr('transform', `translate(${margin.left},0)`)
 
-		// svg.append('image')
-		// 	.attr('xlink:href', background)
-		// 	.attr('width',500)
-		// 	.attr('height', 500)
+		svg.append('image')
+			.attr('xlink:href', background)
+			.attr('width',1100)
+			.attr('height', 1110)
 
 		const x = d3.scaleBand()
 			.domain(d3.range(activityStats.length))		
@@ -37,6 +38,7 @@ export const QuestActivity = ({ activityStats }) => {
 		svg
 			.append('g')
 			.attr('fill', 'crimson')
+			.attr('stroke', 'goldenrod')
 			.selectAll('rect')
 			.data(activityStats.sort((a,b) => d3.descending(a.questQuantity, b.questQuantity)))
 			.join('rect')
@@ -48,17 +50,19 @@ export const QuestActivity = ({ activityStats }) => {
 		const xAxis = (g) => {
 			g.attr('transform', `translate(0, ${height - margin.bottom})`)
 			.call(d3.axisBottom(x).tickFormat(i => activityStats[i].name))
-			.attr('font-size', '1em')
+			.attr('font-size', '1.5rem')
+			.attr('color', 'goldenrod')
 			.attr('font-family', 'MedievalTimes')
 		}
 		const yAxis = (g) => {
 			g.attr('transform', `translate(${margin.left},0)`)
 			.call(d3.axisLeft(y).ticks(null, activityStats.format))
-			.attr('font-size', '20px')
+			.attr('font-size', '1.5rem')
+			.attr('color', 'goldenrod')
 			.attr('font-family', 'MedievalTimes')
 		}
 		svg.append('g').call(xAxis);
 		svg.append('g').call(yAxis);
 	};
-	return <div className='flex justify-center items-center w-fit h-fit'><div className={"chart"}></div></div>;
+	return <section id={"chart"}></section>;
 };
