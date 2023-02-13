@@ -2,7 +2,6 @@ import React, { useEffect } from "react";
 import background from './assets/stonebackground.svg';
 import * as d3 from "d3";
 export const QuestActivity = ({ activityStats }) => {
-	console.log(activityStats)
 	const highestValue = activityStats.map((stat)=> stat.questQuantity)
 	const domainRange = Math.max(...highestValue)
 	useEffect(() => {
@@ -57,7 +56,7 @@ export const QuestActivity = ({ activityStats }) => {
 			.attr('color', 'goldenrod')
 			.attr('writing-mode', 'tb-rl')
 			.attr('font-size', '3.5em')
-			.attr('transform', `rotate(0)translate(50,-90)`)
+			.attr('transform', `rotate(0)translate(45,-90)`)
 			.attr('font-family', 'MedievalTimes')
 			.attr('letter-spacing', '15')
 
