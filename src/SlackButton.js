@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 export const SlackButton = ({email}) => {
   return (
     <Link
-						to={`https://slack.com/oauth/v2/authorize?scope=app_mentions%3Aread%2Cchannels%3Ahistory%2Cchannels%3Ajoin%2Cchannels%3Aread%2Cchat%3Awrite%2Cgroups%3Aread%2Cim%3Aread%2Cim%3Awrite%2Clinks%3Awrite%2Cteam%3Aread&user_scope=&redirect_uri=https%3A%2F%2Fgitgoingslackbot.uc.r.appspot.com%2Fapi%2Fslack%2Finstall%2Fredirect&client_id=4706667577361.4706675007441&state=${email}`}
+						to={`https://slack.com/oauth/v2/authorize?scope=app_mentions%3Aread%2Cchannels%3Ausers%2Cread%3Ahistory%2Cchannels%3Ajoin%2Cchannels%3Aread%2Cchat%3Awrite%2Cgroups%3Aread%2Cim%3Aread%2Cim%3Awrite%2Clinks%3Awrite%2Cteam%3Aread&user_scope=&redirect_uri=https%3A%2F%2Fgitgoingslackbot.uc.r.appspot.com%2Fapi%2Fslack%2Finstall%2Fredirect&client_id=4706667577361.4706675007441&state=${email}`}
 						style={{
 							alignItems: "center",
 							color: "#fff",
