@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 export const SlackButton = ({email}) => {
   return (
     <Link
-						to={`"https://slack.com/oauth/v2/authorize?client_id=4706667577361.4706675007441&scope=app_mentions:read,channels:history,channels:join,channels:read,chat:write,groups:read,im:read,im:write,links:write,team:read,users:read&user_scope=&state=${email}`}
+						to={`https://slack.com/oauth/v2/authorize?client_id=4706667577361.4706675007441&scope=app_mentions:read,channels:history,channels:join,channels:read,chat:write,groups:read,im:read,im:write,links:write,team:read,users:read&user_scope=&state=${email}`}
 						style={{
 							alignItems: "center",
 							color: "#fff",
