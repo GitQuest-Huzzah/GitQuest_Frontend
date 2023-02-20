@@ -1,70 +1,47 @@
-# Getting Started with Create React App
+![GQBANNER](https://user-images.githubusercontent.com/114195647/218575946-a91b1e73-d29d-40b9-9ae9-f35b0f475411.png)
+# GitQuest!
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+GitQuest is a Slack app integration that gamifies your GitHub activity from a selected repository.
 
-## Available Scripts
+## Installation
+To install you'll first need to add the app to your slack workspace by clicking the add to slack button on our website after providing your email. 
 
-In the project directory, you can run:
+Follow the numbered buttons provided to the admin of your organization who installed the app to the Slack workspace.
 
-### `npm start`
+1. Provide your Organization name exactly as it appears on github (eg. ```GitQuest-Huzzah```).
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+2. Authorize our app thru GitHub.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+3. Link any repos you'd like us track activity on for you. Please choose as many as you'd like. Later if you decide to stop tracking certain repos feel free to use the ```Unfollow Repos``` button.
 
-### `npm test`
+4. Link your workspaces users and to their GitHub usernames (don't worry this can be changed at any time in the future).
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+5. Experience the Adventure! 
 
-### `npm run build`
+## Usage
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Quests
+•Once the workspace administrator has followed all the installation instructions your team will be ready to commit to the quest!
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+•Your workspace administrator can create quests, much like a typical ticket to allow a specific amount of gold and xp to bestow upon completion. Quests have a description to cover any and all issues the quest should address, a name to identify it, and MOST importantly a ```keyword``` which will need to be provided as the first word of your pull request subject. The pull request subject is populated automatically from your commit message. This is how we make sure a pull request is referencing a specific quest, so make sure you do it right! However, if you forget, your admin can still complete a quest for you. Just be aware you won't get credit for your pull request or the commits, only the value for the quest itself. Below is an example if the quest keyword were ```bugchase```(note: keywords are NOT case sensitive)
+![image](https://user-images.githubusercontent.com/114195647/218576962-9071803e-a919-41fd-8eee-0dcde2be92fb.png)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+•You can simply claim a quest(or several!) by using the ```Available Quests``` button on the app home screen in Slack.
 
-### `npm run eject`
+•You can view your currently active claimed quests in the ```Quest Log``` on the app home screen in Slack. From ```Quest Log``` you are also able to drop a quest if for some reason you no longer will be resolving this issue and would like to let another adventurer claim it. 
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+•As an admin for the workspace you can view ```Quest Activity``` over the last 7 days incrementally as well using the ```Quest Activity``` button on the app home screen in Slack.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### XP, Gold, and Reward Gold
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+•XP is earned on every commit attached to a pull request. If a pull request is processed with your user name with 3 commits you will receive XP for 3 commits and 1 pull request. Commits are only counted upon a pull request being created.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+•You can also earn XP and Gold from quests created by your workspace administrator.
 
-## Learn More
+•As you play you'll receive gold upon each new level.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+•You are able to freely reward your fellow adventurers if you choose to by clicking ```Reward Gold``` on the app home screen on Slack. Throughout your participation you are given reward gold which is explicitly used to show recognition for your fellow adventurers who may have helped you with an issue or may just be a great coworker. 
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+•You can view your current gold, xp, and reward gold by clicking the ```My Profile``` on the app home screen in Slack.
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+•A log explaining the source of all your gold is found by clicking the ```Gold Log``` button. This will show you gold earned from quests
