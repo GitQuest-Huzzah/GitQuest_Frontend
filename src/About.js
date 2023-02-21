@@ -22,7 +22,8 @@ const About = () => {
 							rewards. Join us on our quest to increase productivity and
 							efficiency, and let's make work a little more fun! We can't wait
 							to embark on this journey with you. Thank ye for choosing
-							GitQuest, and we look forward to sharing our adventures with ye.
+							GitQuest, and we look forward to sharing our adventures with ye. Head to our GitHub to check out our repositories!{" "}
+						<a className="font-medium text-blue-600 dark:text-blue-500 hover:underline" href="https://github.com/orgs/GitQuest-Huzzah/repositories">github.com/GitQuest-Huzzah</a>
 						</p>
 					</div>
 				</div>
