@@ -1,12 +1,13 @@
 import React from 'react';
+import { Login } from './Login';
+import { RenderThis } from './RenderThis';
 import { Route, Routes } from 'react-router-dom';
+import About from './About';
+import Contact from './Contact';
+import FAQPage from './FAQPage';
 import Home from './Home';
 import SignUp from './SignUp';
-import Contact from './Contact';
 import Thanks from './Thanks';
-import About from './About';
-import FAQPage from './FAQPage';
-import { RenderThis } from './RenderThis';
 
 const AppRoutes = () => {
 	return (
@@ -20,6 +21,7 @@ const AppRoutes = () => {
 				<Route path='/about' element={<About />} />
 				<Route path='/faq' element={<FAQPage />} />
 				<Route path='/renderthisforme' element={<RenderThis />} />
+				<Route path='/login' element={<Login/>}/>
 			</Routes>
 		</div>
 	);
