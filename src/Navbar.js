@@ -49,7 +49,7 @@ const Navbar = () => {
 						</Link>
 					</nav>
 					<Link
-						to="/signup"
+						to="/install"
 						className="inline-flex tracking-wide uppercase text-xl items-center sm:mt-0 mt-5 sm:mx-8 justify-center px-5 py-2.5 font-semibold text-white bg-gray-800 dark:bg-gray-600 border border-transparent shadow-sm hover:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900 dark:focus:ring-white 2xl:rounded-full 2xl:border-transparent 2xl:bg-gray-800 rounded-full"
 					>
 						set sail

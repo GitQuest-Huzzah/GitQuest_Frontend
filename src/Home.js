@@ -37,7 +37,7 @@ const Home = () => {
 						</p>
 						<div className='relative flex mt-4'>
 							<Link
-								to='/signup'
+								to='/install'
 								className='flex items-center self-start justify-center px-5 py-2.5 mt-5 text-xl leading-tight text-white transition duration-150 ease-in-out bg-black dark:bg-gray-600 border border-transparent rounded-full shadow lg:py-4 hover:bg-black focus:outline-none focus:border-black focus:shadow-outline-black md:text-lg xl:text-xl md:px-5 xl:px-10 xl:bg-black font-semibold uppercase '
 								data-primary='black'
 								data-rounded='rounded-full'>
