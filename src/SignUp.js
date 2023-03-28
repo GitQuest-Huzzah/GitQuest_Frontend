@@ -22,7 +22,7 @@ export const SignUp = () => {
 	};
 	const handleSubmit = (event) => {
 		axios.post(
-			"https://gitgoingslackbot.uc.r.appspot.com/api/signup",
+			"https://gitgoingslackbot.uc.r.appspot.com/api/auth/signup",
 			signUpFormData
 		);
 		event.preventDefault();
