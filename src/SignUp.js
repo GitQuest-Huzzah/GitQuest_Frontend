@@ -25,7 +25,8 @@ export const SignUp = () => {
   };
 
   const handleSubmit = async (event) => {
-    try {
+    event.preventDefault();
+		try {
       const response = await axios.post(
         "https://gitgoingslackbot.uc.r.appspot.com/api/auth/signup",
         signUpFormData
@@ -36,7 +37,6 @@ export const SignUp = () => {
       setError(err);
 			console.log('error:',error, 'err:', err)
     } finally {
-      event.preventDefault();
       setSignUpFormData({
         email: "",
         password: "",
