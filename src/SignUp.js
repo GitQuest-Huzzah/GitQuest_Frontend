@@ -44,6 +44,7 @@ export const SignUp = () => {
       });
     }
   };
+
   return (
     <div className="py-10 bg-white md:py-16 dark:bg-gray-800 h-full">
       <div className="flex flex-col items-center justify-center mx-auto sm:p-3 xl:pb-4 xl:px-4 lg:max-w-[87rem] lg:p-0">
@@ -81,13 +82,13 @@ export const SignUp = () => {
             ></input>
           </div>
           <div className="flex items-center justify-center sm:col-span-2">
-            <input
+            {error ? error.response.data : <input
               type="submit"
               value="Sign Up"
               className={submitButton}
               data-primary="black"
               data-rounded="rounded-full"
-            />
+            />}
           </div>
         </form>
       </div>
