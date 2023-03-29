@@ -60,7 +60,7 @@ const Install = () => {
 								name="user_email"
 								id="user_email"
 								value={email}
-								onChange={(event) => setEmail(event.target.value)}
+								onChange={(event) => setEmail(event.target.value.toLowerCase())}
 								className="flex min-w-full px-5 py-5 text-2xl bg-gray-200 border border-gray-300 rounded-full focus:ring-4 focus:ring-black dark:focus:ring-white focus:ring-opacity-50 focus:ring-offset-2 focus:outline-none"
 								data-primary="black"
 								data-rounded="rounded-lg"
