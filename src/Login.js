@@ -22,7 +22,7 @@ export const Login = ({ setToken }) => {
         loginFormData
       );
       console.log(response)
-      setToken(response.headers.authorization)
+      setToken(response.data.token)
       setError(null);
     } catch (err) {
       setError(err.response.data);
