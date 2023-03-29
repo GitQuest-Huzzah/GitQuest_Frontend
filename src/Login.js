@@ -1,15 +1,17 @@
 import React, { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
 import { formGrid, inputClass, inputLabel, submitButton } from "./cssClasses";
 import { errorMessage } from "./cssClasses";
 import axios from "axios";
-export const Login = () => {
+import { SignUp } from "./SignUp";
+
+export const Login = ({ setToken }) => {
   const [loginFormData, setLoginFormData] = useState({
     email: "",
     password: "",
   });
   const [error, setError] = useState(null);
-  const navigate = useNavigate();
+  // to conditionally render signup or login based on state
+  const [signUp, setSignUp] = useState(false)
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -19,8 +21,9 @@ export const Login = () => {
         "https://gitgoingslackbot.uc.r.appspot.com/api/auth/login",
         loginFormData
       );
+      console.log(response)
+      setToken(response.headers.authorization)
       setError(null);
-      navigate('/dashboard')
     } catch (err) {
       setError(err.response.data);
     } finally {
@@ -39,6 +42,8 @@ export const Login = () => {
     console.log(loginFormData);
   };
   return (
+    <>
+    { signUp ? <SignUp/> : (
     <div className="py-10 bg-white md:py-16 dark:bg-gray-800 h-full">
       <div className="flex flex-col items-center justify-center mx-auto sm:p-3 xl:pb-4 xl:px-4 lg:max-w-[87rem] lg:p-0">
         <form className={formGrid} onSubmit={handleSubmit}>
@@ -77,13 +82,15 @@ export const Login = () => {
             />
           </div>
         </form>
-        <Link
-          to="/signup"
+        <span
+          onClick={()=>setSignUp(true)}
           className="underline text-blue-300 hover:text-blue-500 pt-3"
         >
           Don't Have an Account Yet?
-        </Link>
+        </span>
       </div>
-    </div>
-  );
+    </div>)
+    }
+    </>
+  )
 };
