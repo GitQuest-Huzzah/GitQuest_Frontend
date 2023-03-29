@@ -7,6 +7,7 @@ import {
 	submitButton,
 } from "./cssClasses";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 export const SignUp = () => {
 	const [signUpFormData, setSignUpFormData] = useState({
 		email: "",
@@ -15,6 +16,7 @@ export const SignUp = () => {
 	});
 	const [results, setResults] = useState(null);
 	const [error, setError] = useState(null);
+	const navigate = useNavigate();
 
 	const updateSignUpFormData = (event) => {
 		const keyToUpdate = event.target.name;
@@ -35,6 +37,7 @@ export const SignUp = () => {
 				);
 				setResults(response.data);
 				setError(null);
+				navigate('/dashboard')
 			} catch (err) {
 				setError(err.response.data);
 				console.log("error:", error, "err:", err);
