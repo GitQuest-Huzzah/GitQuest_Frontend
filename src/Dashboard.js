@@ -18,6 +18,6 @@ export const Dashboard = ({ token }) => {
 	}, []);
 
 	return (
-  <div>{user.data.email}</div>
+  <div>{user ? user.data.email : "THEIR IS NO USER" }</div>
   );
 };
