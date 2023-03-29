@@ -18,6 +18,7 @@ export const Login = () => {
                 "https://gitgoingslackbot.uc.r.appspot.com/api/auth/login",
                 loginFormData
             );
+            console.log(response)
             setError(null);
         } catch (err) {
             setError(err.response.data);
