@@ -70,7 +70,7 @@ export const SignUp = () => {
 							type="email"
 							className={inputClass}
 							onChange={updateSignUpFormData}
-							value={signUpFormData.email.toLowerCase()}
+							value={signUpFormData.email}
 						></input>
 						<label htmlFor="password" className={inputLabel}>
 							Password (minimum 5 characters)
