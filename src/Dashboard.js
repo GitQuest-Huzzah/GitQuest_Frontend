@@ -2,7 +2,8 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 
 export const Dashboard = ({ token }) => {
-  const [user, setUser] = useState({})
+  const [user, setUser] = useState(null)
+  console.log(token, 'token in dashboard')
 	const fetchData = async () => {
 		const response = await axios.get(
 			"https://gitgoingslackbot.uc.r.appspot.com/api/auth/me",
@@ -16,5 +17,7 @@ export const Dashboard = ({ token }) => {
 		fetchData();
 	}, []);
 
-	return <div>{user}</div>;
+	return (
+  <div>{user}</div>
+  );
 };
