@@ -42,10 +42,10 @@ const Navbar = () => {
 							FAQ
 						</Link>
 						<Link
-							to="/login"
+							to="/myaccount"
 							className="text-gray-400 hover:text-gray-500 uppercase"
 						>
-							Login
+							My Account
 						</Link>
 					</nav>
 					<Link

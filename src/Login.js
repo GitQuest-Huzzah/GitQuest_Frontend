@@ -26,7 +26,7 @@ export const Login = ({ setToken }) => {
       setError(null);
     } catch (err) {
         console.log(err)
-      setError(err.response.data);
+      setError(err);
     } finally {
       setLoginFormData({
         email: "",

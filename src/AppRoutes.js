@@ -1,5 +1,4 @@
 import React from 'react';
-import { Login } from './Login';
 import { RenderThis } from './RenderThis';
 import { Route, Routes } from 'react-router-dom';
 import About from './About';
@@ -8,8 +7,7 @@ import FAQPage from './FAQPage';
 import Home from './Home';
 import Install from './Install';
 import Thanks from './Thanks';
-import { SignUp } from './SignUp';
-import { Dashboard } from './Dashboard';
+import { MyAccount } from './MyAccount';
 
 const AppRoutes = () => {
 	return (
@@ -23,9 +21,7 @@ const AppRoutes = () => {
 				<Route path='/about' element={<About />} />
 				<Route path='/faq' element={<FAQPage />} />
 				<Route path='/renderthisforme' element={<RenderThis />} />
-				<Route path='/login' element={<Login/>}/>
-				<Route path='/signup' element={<SignUp/>}/>
-				<Route path='/dashboard' element={<Dashboard />} />
+				<Route path='/myaccount' element={<MyAccount/>}/>
 			</Routes>
 		</div>
 	);
