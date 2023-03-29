@@ -18,6 +18,6 @@ export const Dashboard = ({ token }) => {
 	}, []);
 
 	return (
-  <div>{user}</div>
+  <div>{user.data.email}</div>
   );
 };
