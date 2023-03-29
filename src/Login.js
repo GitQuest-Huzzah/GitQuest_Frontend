@@ -25,6 +25,7 @@ export const Login = ({ setToken }) => {
       setToken(response.data.token)
       setError(null);
     } catch (err) {
+        console.log(err)
       setError(err.response.data);
     } finally {
       setLoginFormData({
