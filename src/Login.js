@@ -12,6 +12,7 @@ export const Login = () => {
 
     const handleSubmit = async (event) => {
     event.preventDefault();
+    console.log(loginFormData)
         try {
             const response = await axios.post(
                 "https://gitgoingslackbot.uc.r.appspot.com/api/auth/login",
@@ -43,7 +44,7 @@ const updateLoginFormData = (event) => {
                     <label htmlFor="email" className={inputLabel}>
                         Email
                     </label>
-                    <input id='email' name="email" className={inputClass}></input>
+                    <input id='email' name="email" className={inputClass} onChange={updateLoginFormData}></input>
                 </div>
                 <div>
                     <label htmlFor="password" className={inputLabel}>
