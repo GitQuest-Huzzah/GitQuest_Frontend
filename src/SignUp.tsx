@@ -80,7 +80,7 @@ export const SignUp = () => {
 							type="password"
 							className={inputClass}
 							onChange={updateSignUpFormData}
-							minLength="5"
+							minLength={5}
 							value={signUpFormData.password}
 						></input>
 						<label htmlFor="retypepassword" className={inputLabel}>
@@ -90,7 +90,7 @@ export const SignUp = () => {
 							id="duplicatepassword"
 							name="duplicatePassword"
 							type="password"
-							minLength="5"
+							minLength={5}
 							className={inputClass}
 							onChange={updateSignUpFormData}
 							value={signUpFormData.duplicatePassword}

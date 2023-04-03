@@ -70,7 +70,7 @@ export const Login = ({ setToken }: LoginProps) => {
 									name="password"
 									className={inputClass}
 									onChange={updateLoginFormData}
-									minLength="5"
+									minLength={5}
 									value={loginFormData.password}
 								></input>
 							</div>

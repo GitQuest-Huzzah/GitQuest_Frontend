@@ -4,7 +4,7 @@ export interface DashboardProps {
 	token: string;
 }
 export interface ThanksProps {
-	email: string;
+	email?: string;
 }
 export interface FAQProps {
 	answer: ReactNode;

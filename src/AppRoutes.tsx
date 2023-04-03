@@ -1,7 +1,7 @@
 import React from "react";
 import { RenderThis } from "./RenderThis";
 import { Route, Routes } from "react-router-dom";
-import About from "./About.js";
+import About from "./About";
 import Contact from "./Contact";
 import FAQPage from "./FAQPage";
 import Home from "./Home";
