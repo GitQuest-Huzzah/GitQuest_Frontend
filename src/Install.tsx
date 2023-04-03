@@ -1,4 +1,3 @@
-
 import React, { useRef, useState } from "react";
 import gqfavicon from "./assets/gqfavicon.svg";
 import emailjs from "@emailjs/browser";
@@ -6,16 +5,16 @@ import Thanks from "./Thanks";
 
 const Install = () => {
 	const [emailSubmitted, setEmailSubmitted] = useState(false);
-	const [email, setEmail] = useState('')
+	const [email, setEmail] = useState("");
 	const form = useRef();
 	const sendEmail = (e) => {
 		e.preventDefault();
 		emailjs
 			.sendForm(
-				'service_e687x2d',
-				'template_l1qdtdl',
+				"service_e687x2d",
+				"template_l1qdtdl",
 				form.current,
-				'tVzwh_ihXx0CdpzBa'
+				"tVzwh_ihXx0CdpzBa"
 			)
 			.then(
 				(result) => {
@@ -25,13 +24,13 @@ const Install = () => {
 					console.log(error.text);
 				}
 			);
-			setEmailSubmitted(true)
+		setEmailSubmitted(true);
 	};
 
 	return (
 		<section className="py-20 bg-white dark:bg-gray-800 min-h-screen">
 			{emailSubmitted ? (
-				<Thanks email={email}/>
+				<Thanks email={email} />
 			) : (
 				<div className="flex flex-col items-center justify-center mx-auto sm:p-3 xl:pb-4 xl:px-4 lg:max-w-[87rem] lg:p-0">
 					<div className="flex flex-col justify-center items-center space-y-8 w-3/4">

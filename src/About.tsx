@@ -22,8 +22,14 @@ const About = () => {
 							rewards. Join us on our quest to increase productivity and
 							efficiency, and let's make work a little more fun! We can't wait
 							to embark on this journey with you. Thank ye for choosing
-							GitQuest, and we look forward to sharing our adventures with ye. Head to our GitHub to check out our repositories!{" "}
-						<a className="font-medium text-blue-600 dark:text-blue-500 hover:underline" href="https://github.com/orgs/GitQuest-Huzzah/repositories">github.com/GitQuest-Huzzah</a>
+							GitQuest, and we look forward to sharing our adventures with ye.
+							Head to our GitHub to check out our repositories!{" "}
+							<a
+								className="font-medium text-blue-600 dark:text-blue-500 hover:underline"
+								href="https://github.com/orgs/GitQuest-Huzzah/repositories"
+							>
+								github.com/GitQuest-Huzzah
+							</a>
 						</p>
 					</div>
 				</div>
@@ -112,7 +118,7 @@ const About = () => {
 					</div>
 
 					<div className="flex flex-wrap items-center justify-center flex-row p-8 text-gray-900 box-border w-full">
-					<div className="relative flex-none items-center justify-center my-8 mx-4 w-80 h-fit md:flex-none border border-gray-200 rounded-lg shadow-md">
+						<div className="relative flex-none items-center justify-center my-8 mx-4 w-80 h-fit md:flex-none border border-gray-200 rounded-lg shadow-md">
 							<div className="flex flex-col items-center justify-center p-5">
 								<img
 									className="w-full h-full mb-6 rounded-full"

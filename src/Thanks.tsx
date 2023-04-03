@@ -2,8 +2,9 @@ import React from "react";
 import { Link } from "react-router-dom";
 import diamond from "./assets/diamond.svg";
 import { SlackButton } from "./SlackButton";
+import { ThanksProps } from "./Interfaces";
 
-const Thanks = ({email}) => {
+const Thanks = ({ email }: ThanksProps) => {
 	return (
 		<section className="relative w-full bg-white dark:bg-gray-800 h-screen">
 			<div className="flex flex-col items-center justify-center mx-auto sm:p-3 xl:pb-4 xl:px-4 lg:flex-row lg:max-w-[87rem] w-[85%] lg:p-0">
@@ -19,7 +20,7 @@ const Thanks = ({email}) => {
 						concerns.
 					</p>
 					<br />
-					<SlackButton email={email}/>
+					<SlackButton email={email} />
 					<br />
 					<p className="my-8 text-xl text-gray-500">
 						Onward and upward, adventurer! Your GitQuest awaits.
