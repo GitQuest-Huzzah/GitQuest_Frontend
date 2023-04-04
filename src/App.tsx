@@ -5,12 +5,12 @@ import Footer from "./Footer";
 import Navbar from "./Navbar";
 
 const App = () => {
-	const currentDarkModePreference = localStorage.getItem("darkMode");
+	const currentDarkModePreference: string = localStorage.getItem("darkMode");
 	const [darkMode, setDarkMode] = useState(
 		currentDarkModePreference === "true" ? true : false
 	);
 	useEffect(() => {
-		localStorage.setItem("darkMode", darkMode);
+		localStorage.setItem("darkMode", darkMode.toString());
 	}, [darkMode]);
 	const { pathname } = useLocation();
 	const hideNav = pathname === "/renderthisforme";

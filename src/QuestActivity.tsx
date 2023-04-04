@@ -6,7 +6,7 @@ export const QuestActivity = ({ activityStats }) => {
 	const domainRange = Math.max(...highestValue);
 	useEffect(() => {
 		drawChart();
-	}, []);
+	});
 
 	const width = 500;
 	const height = 600;

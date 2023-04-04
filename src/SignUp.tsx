@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import {
-  errorMessage,
+	errorMessage,
 	formGridOneColumn,
 	inputClass,
 	inputLabel,
@@ -14,7 +14,6 @@ export const SignUp = () => {
 		password: "",
 		duplicatePassword: "",
 	});
-	const [results, setResults] = useState(null);
 	const [error, setError] = useState(null);
 
 	const updateSignUpFormData = (event) => {
@@ -30,11 +29,10 @@ export const SignUp = () => {
 		event.preventDefault();
 		if (validateForm()) {
 			try {
-				const response = await axios.post(
+				await axios.post(
 					"https://gitgoingslackbot.uc.r.appspot.com/api/auth/signup",
 					signUpFormData
 				);
-				setResults(response.data);
 				setError(null);
 			} catch (err) {
 				setError(err.response.data);
@@ -52,10 +50,10 @@ export const SignUp = () => {
 		console.log(error);
 		if (signUpFormData.password !== signUpFormData.duplicatePassword) {
 			setError("Passwords don't match!");
-      return false;
+			return false;
 		}
 		setError(null);
-    return true
+		return true;
 	};
 	return (
 		<div className="py-10 bg-white md:py-16 dark:bg-gray-800 h-full">
@@ -82,7 +80,7 @@ export const SignUp = () => {
 							type="password"
 							className={inputClass}
 							onChange={updateSignUpFormData}
-              minLength="5"
+							minLength={5}
 							value={signUpFormData.password}
 						></input>
 						<label htmlFor="retypepassword" className={inputLabel}>
@@ -92,23 +90,21 @@ export const SignUp = () => {
 							id="duplicatepassword"
 							name="duplicatePassword"
 							type="password"
-              minLength="5"
+							minLength={5}
 							className={inputClass}
 							onChange={updateSignUpFormData}
 							value={signUpFormData.duplicatePassword}
 						></input>
 					</div>
 					<div className="flex items-center flex-col justify-center sm:col-span-2">
-            {error ? (
-              <div className={errorMessage}>{error}</div>
-            ) : null}
-							<input
-								type="submit"
-								value="Sign Up"
-								className={submitButton}
-								data-primary="black"
-								data-rounded="rounded-full"
-                />
+						{error ? <div className={errorMessage}>{error}</div> : null}
+						<input
+							type="submit"
+							value="Sign Up"
+							className={submitButton}
+							data-primary="black"
+							data-rounded="rounded-full"
+						/>
 					</div>
 				</form>
 			</div>
