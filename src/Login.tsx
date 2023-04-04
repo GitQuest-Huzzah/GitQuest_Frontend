@@ -21,7 +21,7 @@ export const Login = ({ setToken }: LoginProps) => {
 				"https://gitgoingslackbot.uc.r.appspot.com/api/auth/login",
 				loginFormData
 			);
-			console.log(response.data.token);
+			console.log(response);
 			setToken(response.data.token);
 			setError(null);
 		} catch (err) {
