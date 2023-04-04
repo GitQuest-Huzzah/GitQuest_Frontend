@@ -1,7 +1,8 @@
 import React, { useEffect } from "react";
 import background from "./assets/stonebackground.svg";
 import * as d3 from "d3";
-export const QuestActivity = ({ activityStats }) => {
+import { QuestActivityProps } from "./Interfaces";
+export const QuestActivity = ({ activityStats }:QuestActivityProps) => {
 	const highestValue = activityStats.map((stat) => stat.questQuantity);
 	const domainRange = Math.max(...highestValue);
 	useEffect(() => {
@@ -60,7 +61,7 @@ export const QuestActivity = ({ activityStats }) => {
 				.call(
 					d3
 						.axisBottom(x)
-						.tickFormat((i) => activityStats[i].name.substring(0, 3))
+						.tickFormat((i:number) => activityStats[i].name.substring(0, 3))
 				)
 				.selectAll(".tick text")
 				.attr("rotate", -90)
@@ -73,7 +74,9 @@ export const QuestActivity = ({ activityStats }) => {
 		};
 		const yAxis = (g) => {
 			g.attr("transform", `translate(${margin.left},0)`)
-				.call(d3.axisLeft(y).ticks(null, activityStats.format))
+				.call(d3.axisLeft(y).ticks
+				//@ts-ignore
+				(null, activityStats.format))
 				.attr("font-size", "1.5em")
 				.attr("color", "goldenrod")
 				.attr("font-family", "MedievalTimes");
