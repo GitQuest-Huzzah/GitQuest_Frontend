@@ -24,3 +24,10 @@ export interface PlayerProfileProps {
 export interface SlackButtonProps {
 	email: string;
 }
+
+export interface QuestActivityProps{
+	activityStats:{
+		questQuantity:number;
+		name: string;
+	}[]
+}
