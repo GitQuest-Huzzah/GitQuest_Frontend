@@ -1,5 +1,5 @@
 /** @type {import('tailwindcss').Config} */
-exports = {
+module.exports = {
 	  content: [
 		'./**/*.html',
 		'./**/*.vue',
