@@ -20,7 +20,7 @@ export const Dashboard = ({ setLoggedIn }: LoginProps) => {
 				setUser(response);
 			})();
 		}
-		if (user) {
+		if (user && !infoList) {
 			(async () => {
 				const response = await axios.get(
 					"https://gitgoingslackbot.uc.r.appspot.com/api/auth/me/list",
