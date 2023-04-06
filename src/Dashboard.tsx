@@ -1,9 +1,15 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-export const Dashboard = () => {
+import { submitButton } from "./cssClasses";
+import { LoginProps } from "./Interfaces";
+export const Dashboard = ({setLoggedIn}:LoginProps) => {
 	const [user, setUser] = useState(null);
-	const token = window.localStorage.getItem("token")
+	const token = window.localStorage.getItem("token");
 	console.log(token, "token in dashboard");
+	const logOut = () =>{
+		window.localStorage.removeItem('token');
+		setLoggedIn(false)
+	}
 	useEffect(() => {
 		const fetchData = async () => {
 			const response = await axios.get(
@@ -13,7 +19,21 @@ export const Dashboard = () => {
 			setUser(response);
 		};
 		fetchData();
-	},[token]);
-
-	return <div>{user ? user.data.email : "THEIR IS NO USER"}</div>;
+	}, [token]);
+	return (
+		<div>
+			{user ? user.data.email : "THEIR IS NO USER"}
+			<div className="flex items-center flex-col justify-center sm:col-span-2">
+				<button
+					className={submitButton}
+					data-primary="black"
+					data-rounded="rounded-full"
+					onClick={logOut}
+				>
+					{" "}
+					Log Out{" "}
+				</button>
+			</div>{" "}
+		</div>
+	);
 };

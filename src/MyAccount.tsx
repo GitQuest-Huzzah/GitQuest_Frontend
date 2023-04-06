@@ -4,7 +4,6 @@ import { Login } from "./Login";
 
 export const MyAccount = () => {
 	const [loggedIn, setLoggedIn] = useState(false);
-	const [loading, setLoading] = useState(false);
 	const token: string = window.localStorage.getItem("token");
 	useEffect(() => {
 		token ? setLoggedIn(true) : setLoggedIn(false);
@@ -13,7 +12,7 @@ export const MyAccount = () => {
 	return (
 		<div>
 			{token ? (
-				<Dashboard />
+				<Dashboard setLoggedIn={(value) => setLoggedIn(value)} />
 			) : (
 				<Login setLoggedIn={(value) => setLoggedIn(value)} />
 			)}
