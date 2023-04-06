@@ -17,9 +17,10 @@ export const Dashboard = ({setLoggedIn}:LoginProps) => {
 				{ headers: { authorization: token } }
 			);
 			setUser(response);
+			console.log(user, "user in dashboard")
 		};
 		fetchData();
-	}, [token]);
+	}, [token, user]);
 	return (
 		<div>
 			{user ? user.data.email : "THEIR IS NO USER"}
