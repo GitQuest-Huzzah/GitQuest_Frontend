@@ -5,7 +5,6 @@ import { Login } from "./Login";
 export const MyAccount = () => {
 	const [loggedIn, setLoggedIn] = useState(false);
 	const token: string = window.localStorage.getItem("token");
-
 	return (
 		<div>
 			{token && loggedIn ? (
