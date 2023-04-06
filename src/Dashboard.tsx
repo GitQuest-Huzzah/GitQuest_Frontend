@@ -21,7 +21,7 @@ export const Dashboard = ({setLoggedIn}:LoginProps) => {
 	}, [token]);
 	return (
 		<div>
-			{user ? user.data.email : "THEIR IS NO USER"}
+			{user ? user.data.email : null}
 			<div className="flex items-center flex-col justify-center sm:col-span-2">
 				<button
 					className={submitButton}
