@@ -79,13 +79,14 @@ export const Login = ({ setLoggedIn }: LoginProps) => {
 							</div>
 							{loading ? (
 							<div
-								className="inline-block h-8 w-8 animate-spin rounded-full border-4 border-solid border-current border-r-transparent align-[-0.125em] text-primary motion-reduce:animate-[spin_1.5s_linear_infinite]"
+								className="inline-block h-8 w-8 animate-spin rounded-full border-4 border-solid border-current border-r-transparent align-[-0.125em] fill-blue-500 motion-reduce:animate-[spin_1.5s_linear_infinite]"
 								role="status"
 							>
 								<span className="flex items-center flex-col justify-center sm:col-span-2 !absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]">
 									Loading...
 								</span>
 							</div>
+							
 						) : <div className="flex items-center flex-col justify-center sm:col-span-2">
 								{error ? <div className={errorMessage}>Incorrect Username/Password Please Try Again</div> : null}
 								<input
