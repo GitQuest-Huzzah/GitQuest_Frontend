@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { Dashboard } from "./Dashboard";
 import { Login } from "./Login";
 
