@@ -11,6 +11,9 @@ export const Dashboard = ({ setLoggedIn }: LoginProps) => {
 		setLoggedIn(false);
 	};
 	useEffect(() => {
+		if (user && infoList){
+			return
+		}
 		if (!user) {
 			(async () => {
 				const response = await axios.get(
