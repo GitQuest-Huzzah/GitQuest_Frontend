@@ -1,16 +1,20 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Dashboard } from "./Dashboard";
 import { Login } from "./Login";
 
 export const MyAccount = () => {
-	const [token, setToken] = useState("");
+	const [loggedIn, setLoggedIn] = useState(false);
+	const token: string = window.localStorage.getItem("token");
+	useEffect(() => {
+		token ? setLoggedIn(true) : setLoggedIn(false);
+	}, [token, loggedIn]);
 
 	return (
 		<div>
 			{token ? (
-				<Dashboard token={token} />
+				<Dashboard />
 			) : (
-				<Login setToken={(response) => setToken(response)} />
+				<Login setLoggedIn={(value) => setLoggedIn(value)} />
 			)}
 		</div>
 	);

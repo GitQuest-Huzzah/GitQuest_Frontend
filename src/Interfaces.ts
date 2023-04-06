@@ -1,8 +1,5 @@
 import { ReactNode } from "react";
 
-export interface DashboardProps {
-	token: string;
-}
 export interface ThanksProps {
 	email?: string;
 }
@@ -11,7 +8,7 @@ export interface FAQProps {
 	question: string;
 }
 export interface LoginProps {
-	setToken: (token: string) => void;
+	setLoggedIn: (value: boolean) => void;
 }
 export interface PlayerProfileProps {
 	gold: number;

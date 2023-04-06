@@ -4,7 +4,7 @@ import { errorMessage } from "./cssClasses";
 import axios from "axios";
 import { SignUp } from "./SignUp";
 import { LoginProps } from "./Interfaces";
-export const Login = ({ setToken }: LoginProps) => {
+export const Login = ({ setLoggedIn }: LoginProps) => {
 	const [loginFormData, setLoginFormData] = useState({
 		email: "",
 		password: "",
@@ -21,8 +21,8 @@ export const Login = ({ setToken }: LoginProps) => {
 				"https://gitgoingslackbot.uc.r.appspot.com/api/auth/login",
 				loginFormData
 			);
-			console.log(response);
-			setToken(response.data.token);
+			window.localStorage.setItem("token", response.data.token)
+			response.data.token ? setLoggedIn(true) : setLoggedIn(false)
 			setError(null);
 		} catch (err) {
 			console.log(err);
