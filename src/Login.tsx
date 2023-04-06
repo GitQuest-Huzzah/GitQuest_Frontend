@@ -5,6 +5,7 @@ import axios from "axios";
 import { SignUp } from "./SignUp";
 import { LoginProps } from "./Interfaces";
 export const Login = ({ setLoggedIn }: LoginProps) => {
+	const [loading, setLoading] = useState(false);
 	const [loginFormData, setLoginFormData] = useState({
 		email: "",
 		password: "",
@@ -14,6 +15,7 @@ export const Login = ({ setLoggedIn }: LoginProps) => {
 	const [signUp, setSignUp] = useState(false);
 
 	const handleSubmit = async (event) => {
+		setLoading(true);
 		event.preventDefault();
 		console.log(loginFormData);
 		try {
@@ -21,8 +23,8 @@ export const Login = ({ setLoggedIn }: LoginProps) => {
 				"https://gitgoingslackbot.uc.r.appspot.com/api/auth/login",
 				loginFormData
 			);
-			window.localStorage.setItem("token", response.data.token)
-			response.data.token ? setLoggedIn(true) : setLoggedIn(false)
+			window.localStorage.setItem("token", response.data.token);
+			response.data.token ? setLoggedIn(true) : setLoggedIn(false);
 			setError(null);
 		} catch (err) {
 			console.log(err);
@@ -32,6 +34,7 @@ export const Login = ({ setLoggedIn }: LoginProps) => {
 				email: "",
 				password: "",
 			});
+			setLoading(false)
 		}
 	};
 	const updateLoginFormData = (event) => {
@@ -45,7 +48,7 @@ export const Login = ({ setLoggedIn }: LoginProps) => {
 	return (
 		<>
 			{signUp ? (
-				<SignUp />
+				<SignUp setLoggedIn={(value) => setLoggedIn(value)} />
 			) : (
 				<div className="py-10 bg-white md:py-16 dark:bg-gray-800 h-full">
 					<div className="flex flex-col items-center justify-center mx-auto sm:p-3 xl:pb-4 xl:px-4 lg:max-w-[87rem] lg:p-0">
@@ -74,8 +77,17 @@ export const Login = ({ setLoggedIn }: LoginProps) => {
 									value={loginFormData.password}
 								></input>
 							</div>
-							<div className="flex items-center flex-col justify-center sm:col-span-2">
-								{error ? <div className={errorMessage}>{error}</div> : null}
+							{loading ? (
+							<div
+								className="flex items-center flex-col justify-center sm:col-span-2 h-8 w-8 animate-spin rounded-full border-4 border-solid border-current border-r-transparent align-[-0.125em] text-primary motion-reduce:animate-[spin_1.5s_linear_infinite]"
+								role="status"
+							>
+								<span className="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]">
+									Loading...
+								</span>
+							</div>
+						) : <div className="flex items-center flex-col justify-center sm:col-span-2">
+								{error ? <div className={errorMessage}>Incorrect Username/Password Please Try Again</div> : null}
 								<input
 									type="submit"
 									value="Login"
@@ -83,7 +95,7 @@ export const Login = ({ setLoggedIn }: LoginProps) => {
 									data-primary="black"
 									data-rounded="rounded-full"
 								/>
-							</div>
+							</div> }
 						</form>
 						<span
 							onClick={() => setSignUp(true)}

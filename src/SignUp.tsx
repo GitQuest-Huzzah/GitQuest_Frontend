@@ -7,8 +7,8 @@ import {
 	submitButton,
 } from "./cssClasses";
 import axios from "axios";
-
-export const SignUp = () => {
+import { LoginProps } from "./Interfaces";
+export const SignUp = ({setLoggedIn}:LoginProps) => {
 	const [signUpFormData, setSignUpFormData] = useState({
 		email: "",
 		password: "",
@@ -29,10 +29,12 @@ export const SignUp = () => {
 		event.preventDefault();
 		if (validateForm()) {
 			try {
-				await axios.post(
+				const response = await axios.post(
 					"https://gitgoingslackbot.uc.r.appspot.com/api/auth/signup",
 					signUpFormData
 				);
+				window.localStorage.setItem("token", response.data.token)
+				setLoggedIn(true)
 				setError(null);
 			} catch (err) {
 				setError(err.response.data);
