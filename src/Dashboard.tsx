@@ -5,7 +5,6 @@ import { LoginProps } from "./Interfaces";
 export const Dashboard = ({setLoggedIn}:LoginProps) => {
 	const [user, setUser] = useState(null);
 	const token = window.localStorage.getItem("token");
-	console.log(token, "token in dashboard");
 	const logOut = () =>{
 		window.localStorage.removeItem('token');
 		setLoggedIn(false)
