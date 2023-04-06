@@ -33,7 +33,7 @@ export const Dashboard = ({ setLoggedIn }: LoginProps) => {
 				console.log(infoList, "infolist")
 			})();
 		}
-	}, [token, infoList, user]);
+	}, [token]);
 	return (
 		<div>
 			{user ? user.data.email : null}
