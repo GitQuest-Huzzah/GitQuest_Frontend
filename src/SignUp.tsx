@@ -34,7 +34,6 @@ export const SignUp = ({ setLoggedIn }: LoginProps) => {
 					"https://gitgoingslackbot.uc.r.appspot.com/api/auth/signup",
 					signUpFormData
 				);
-				console.log(response.data.token, "token in signup")
 				window.localStorage.setItem("token", response.data.token);
 				setLoggedIn(true);
 				setError(null);
