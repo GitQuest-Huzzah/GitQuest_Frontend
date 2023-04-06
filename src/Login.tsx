@@ -68,6 +68,7 @@ export const Login = ({ setLoggedIn }: LoginProps) => {
 								<input
 									id="password"
 									name="password"
+									type="password"
 									className={inputClass}
 									onChange={updateLoginFormData}
 									minLength={5}
