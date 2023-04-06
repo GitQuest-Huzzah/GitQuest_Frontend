@@ -22,7 +22,6 @@ export const SignUp = ({ setLoggedIn }: LoginProps) => {
 			...currentInfo,
 			[keyToUpdate]: event.target.value,
 		}));
-		console.log(signUpFormData);
 	};
 
 	const handleSubmit = async (event) => {
@@ -39,7 +38,6 @@ export const SignUp = ({ setLoggedIn }: LoginProps) => {
 				setError(null);
 			} catch (err) {
 				setError(err.response.data);
-				console.log("error:", error, "err:", err);
 			} finally {
 				setSignUpFormData({
 					email: "",

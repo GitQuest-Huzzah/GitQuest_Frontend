@@ -17,7 +17,6 @@ export const Login = ({ setLoggedIn }: LoginProps) => {
 	const handleSubmit = async (event) => {
 		setLoading(true);
 		event.preventDefault();
-		console.log(loginFormData);
 		try {
 			const response = await axios.post(
 				"https://gitgoingslackbot.uc.r.appspot.com/api/auth/login",
@@ -27,7 +26,6 @@ export const Login = ({ setLoggedIn }: LoginProps) => {
 			response.data.token ? setLoggedIn(true) : setLoggedIn(false);
 			setError(null);
 		} catch (err) {
-			console.log(err);
 			setError(err);
 		} finally {
 			setLoginFormData({
@@ -43,7 +41,6 @@ export const Login = ({ setLoggedIn }: LoginProps) => {
 			...currentInfo,
 			[keyToUpdate]: event.target.value,
 		}));
-		console.log(loginFormData);
 	};
 	return (
 		<>
