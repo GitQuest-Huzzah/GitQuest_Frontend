@@ -14,25 +14,16 @@ export const Dashboard = ({ setLoggedIn }: LoginProps) => {
 		if (user && infoList){
 			return
 		}
-		if (!user) {
-			(async () => {
-				const response = await axios.get(
+		if (!user) { axios.get(
 					"https://gitgoingslackbot.uc.r.appspot.com/api/auth/me",
 					{ headers: { authorization: token } }
-				);
-				setUser(response);
-			})();
+				).then(setUser);
 		}
-		if (user && !infoList) {
-			(async () => {
-				const response = await axios.get(
+		if (user && !infoList) {axios.get(
 					"https://gitgoingslackbot.uc.r.appspot.com/api/auth/me/list",
 					{ headers: { authorization: token } }
-				);
-				setInfoList(response);
-				console.log(infoList, "infolist")
-			})();
-		}
+				).then(setInfoList)
+			}
 	}, [token]);
 	return (
 		<div>
