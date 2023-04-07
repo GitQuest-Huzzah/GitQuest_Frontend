@@ -12,6 +12,7 @@ export const Dashboard = ({ setLoggedIn }: LoginProps) => {
 	};
 	useEffect(() => {
 		if (user && infoList){
+			console.log(user,"user", infoList, "infolist")
 			return
 		}
 		if (!user) { axios.get(
@@ -24,7 +25,6 @@ export const Dashboard = ({ setLoggedIn }: LoginProps) => {
 					{ headers: { authorization: token } }
 				).then(setInfoList)
 			}
-
 	}, [token, user, infoList]);
 	return (
 		<div>
