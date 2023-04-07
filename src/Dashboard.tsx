@@ -32,7 +32,7 @@ export const Dashboard = ({ setLoggedIn }: LoginProps) => {
 	}, [token, user, infoList]);
 	return (
 		<div>
-			{user && user.data.length() ? user.data.email : null}
+			{/* {user && user.data.length() ? user.data.email : null}
 			{infoList && infoList.data.length()
 				? infoList.data.map((info: InfoList) => (
 						<div key={`this is team ${info.id}`}>
@@ -40,7 +40,7 @@ export const Dashboard = ({ setLoggedIn }: LoginProps) => {
 							<h3>Team Name: {info.teamName}</h3>
 						</div>
 				  ))
-				: null}
+				: null} */}
 			<div className="flex items-center flex-col justify-center sm:col-span-2">
 				<button
 					className={submitButton}
