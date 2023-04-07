@@ -30,8 +30,8 @@ export const Dashboard = ({ setLoggedIn }: LoginProps) => {
 				.then(setInfoList);
 		}
 	}, [token, user, infoList]);
-	const { orgName, teamName }: InfoList = infoList;
-	const { email, gitHubLogin }: UserInfo = user;
+	const { orgName, teamName }: InfoList = infoList.data;
+	const { email, gitHubLogin }: UserInfo = user.data;
 	return (
 		<div>
 			{user ? (
