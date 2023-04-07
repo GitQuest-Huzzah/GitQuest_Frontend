@@ -34,7 +34,7 @@ export const Dashboard = ({ setLoggedIn }: LoginProps) => {
 		<div>
 			{user ? user.data.email : null}
 			{infoList
-				? infoList.map((info: InfoList) => (
+				? infoList.data.map((info: InfoList) => (
 						<div key={`this is team ${info.id}`}>
 							<h3>Organization Name: {info.orgName}</h3>
 							<h3>Team Name: {info.teamName}</h3>
