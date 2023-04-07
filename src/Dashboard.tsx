@@ -45,11 +45,12 @@ export const Dashboard = ({ setLoggedIn }: LoginProps) => {
 				</div>
 			) : null}
 			{infoList
-				? infoList.data.users.map((user) => (
+				? infoList.data.users.map((user) =>
+						user.gitHubLogin ? (
 							<li key={`user id ${user.id}`}>
-								<div>{user.gitHubLogin ? user.gitHubLogin : null}</div>
+								{user.gitHubLogin ? user.gitHubLogin : null}
 							</li>
-						)
+						) : null
 				  )
 				: null}
 			<div className="flex items-center flex-col justify-center sm:col-span-2">
