@@ -34,3 +34,8 @@ export interface InfoList {
 	teamName: string;
 	id: number;
 }
+
+export interface UserInfo {
+	gitHubLogin: string;
+	email?: string;
+}

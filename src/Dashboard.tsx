@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { submitButton } from "./cssClasses";
-import { LoginProps, InfoList } from "./Interfaces";
+import { LoginProps, InfoList, UserInfo } from "./Interfaces";
 export const Dashboard = ({ setLoggedIn }: LoginProps) => {
 	const [user, setUser] = useState(null);
 	const [infoList, setInfoList] = useState(null);
@@ -30,17 +30,21 @@ export const Dashboard = ({ setLoggedIn }: LoginProps) => {
 				.then(setInfoList);
 		}
 	}, [token, user, infoList]);
+	const { orgName, teamName }: InfoList = infoList;
+	const { email, gitHubLogin }: UserInfo = user;
 	return (
 		<div>
-			{/* {user && user.data.length() ? user.data.email : null}
-			{infoList && infoList.data.length()
-				? infoList.data.map((info: InfoList) => (
-						<div key={`this is team ${info.id}`}>
-							<h3>Organization Name: {info.orgName}</h3>
-							<h3>Team Name: {info.teamName}</h3>
-						</div>
-				  ))
-				: null} */}
+			{user ? (
+				<div>
+					<h2>Email:{email}</h2> <h2>GitHub:{gitHubLogin}</h2>
+				</div>
+			) : null}
+			{infoList ? (
+				<div>
+					<h3>Organization Name: {orgName}</h3>
+					<h3>Team Name: {teamName}</h3>
+				</div>
+			) : null}
 			<div className="flex items-center flex-col justify-center sm:col-span-2">
 				<button
 					className={submitButton}
