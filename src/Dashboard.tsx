@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { submitButton } from "./cssClasses";
-import { LoginProps } from "./Interfaces";
+import { LoginProps, InfoList } from "./Interfaces";
 export const Dashboard = ({ setLoggedIn }: LoginProps) => {
 	const [user, setUser] = useState(null);
 	const [infoList, setInfoList] = useState(null);
@@ -11,24 +11,36 @@ export const Dashboard = ({ setLoggedIn }: LoginProps) => {
 		setLoggedIn(false);
 	};
 	useEffect(() => {
-		if (user && infoList){
-			console.log(user,"user", infoList, "infolist")
-			return
+		if (user && infoList) {
+			console.log(user, "user", infoList, "infolist");
+			return;
 		}
-		if (!user) { axios.get(
-					"https://gitgoingslackbot.uc.r.appspot.com/api/auth/me",
-					{ headers: { authorization: token } }
-				).then(setUser);
+		if (!user) {
+			axios
+				.get("https://gitgoingslackbot.uc.r.appspot.com/api/auth/me", {
+					headers: { authorization: token },
+				})
+				.then(setUser);
 		}
-		if (user && !infoList) {axios.get(
-					"https://gitgoingslackbot.uc.r.appspot.com/api/auth/me/list",
-					{ headers: { authorization: token } }
-				).then(setInfoList)
-			}
+		if (user && !infoList) {
+			axios
+				.get("https://gitgoingslackbot.uc.r.appspot.com/api/auth/me/list", {
+					headers: { authorization: token },
+				})
+				.then(setInfoList);
+		}
 	}, [token, user, infoList]);
 	return (
 		<div>
 			{user ? user.data.email : null}
+			{infoList
+				? infoList.map((info: InfoList) => (
+						<div key={`this is team ${info.id}`}>
+							<h3>Organization Name: {info.orgName}</h3>
+							<h3>Team Name: {info.teamName}</h3>
+						</div>
+				  ))
+				: null}
 			<div className="flex items-center flex-col justify-center sm:col-span-2">
 				<button
 					className={submitButton}

@@ -22,9 +22,15 @@ export interface SlackButtonProps {
 	email: string;
 }
 
-export interface QuestActivityProps{
-	activityStats:{
-		questQuantity:number;
+export interface QuestActivityProps {
+	activityStats: {
+		questQuantity: number;
 		name: string;
-	}[]
+	}[];
+}
+
+export interface InfoList {
+	orgName: string;
+	teamName: string;
+	id: number;
 }
