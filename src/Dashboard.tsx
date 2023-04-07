@@ -24,7 +24,9 @@ export const Dashboard = ({ setLoggedIn }: LoginProps) => {
 					{ headers: { authorization: token } }
 				).then(setInfoList)
 			}
-	}, [token]);
+
+		console.log(setInfoList)
+	}, [token, user]);
 	return (
 		<div>
 			{user ? user.data.email : null}
