@@ -11,6 +11,7 @@ export const Dashboard = ({ setLoggedIn }: LoginProps) => {
 		setLoggedIn(false);
 	};
 	useEffect(() => {
+		console.log(setInfoList)
 		if (user && infoList){
 			return
 		}
@@ -25,7 +26,6 @@ export const Dashboard = ({ setLoggedIn }: LoginProps) => {
 				).then(setInfoList)
 			}
 
-		console.log(setInfoList)
 	}, [token, user]);
 	return (
 		<div>
