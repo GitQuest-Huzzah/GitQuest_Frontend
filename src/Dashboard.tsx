@@ -34,7 +34,8 @@ export const Dashboard = ({ setLoggedIn }: LoginProps) => {
 		<div>
 			{user ? (
 				<div>
-					<h2>Email:{user.data.email}</h2> <h2>GitHub:{user.data.gitHubLogin}</h2>
+					<h2>Email:{user.data.email}</h2>{" "}
+					<h2>GitHub:{user.data.gitHubLogin}</h2>
 				</div>
 			) : null}
 			{infoList ? (
@@ -43,6 +44,15 @@ export const Dashboard = ({ setLoggedIn }: LoginProps) => {
 					<h3>Team Name: {infoList.data.teamName}</h3>
 				</div>
 			) : null}
+			{infoList
+				? infoList.data.users.map((user) =>
+						user.gitHubLogin ? (
+							<li key={`user id ${user.id}`}>
+								<div>{user.gitHubLogin ? user.gitHubLogin : null}</div>
+							</li>
+						) : null
+				  )
+				: null}
 			<div className="flex items-center flex-col justify-center sm:col-span-2">
 				<button
 					className={submitButton}
