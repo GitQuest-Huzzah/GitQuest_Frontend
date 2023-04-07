@@ -32,8 +32,8 @@ export const Dashboard = ({ setLoggedIn }: LoginProps) => {
 	}, [token, user, infoList]);
 	return (
 		<div>
-			{user ? user.data.email : null}
-			{infoList
+			{user && user.data.length() ? user.data.email : null}
+			{infoList && infoList.data.length()
 				? infoList.data.map((info: InfoList) => (
 						<div key={`this is team ${info.id}`}>
 							<h3>Organization Name: {info.orgName}</h3>
