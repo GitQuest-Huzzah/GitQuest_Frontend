@@ -30,6 +30,13 @@ export const Dashboard = ({ setLoggedIn }: LoginProps) => {
 				.then(setInfoList);
 		}
 	}, [token, user, infoList]);
+
+	//currently we have access to: 
+	// user.data: admin user email, gitHubLogin, and workspaceId
+	// infoList.data: orgName, teamName
+	//infoList.data.users.repos: array of repoNames
+	//infoList.data.users.playerstat: commits, exp, gold, id , level, pullRequests, questsCompleted, rewardGold, title, userId
+	//infoList.data.users.quests: name, keyword, description, goldValue, expValue, status, pullRequestID
 	return (
 		<div>
 			{user ? (
