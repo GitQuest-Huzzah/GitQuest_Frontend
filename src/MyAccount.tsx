@@ -3,7 +3,7 @@ import { Dashboard } from "./Dashboard";
 import { Login } from "./Login";
 
 export const MyAccount = () => {
-	const [loggedIn, setLoggedIn] = useState(false);
+	const [loggedIn, setLoggedIn] = useState<boolean>(false);
 	const token: string = window.localStorage.getItem("token");
 	useEffect(() => {
 	  if (token) {

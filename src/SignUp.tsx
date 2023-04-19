@@ -7,15 +7,15 @@ import {
 	submitButton,
 } from "./cssClasses";
 import axios from "axios";
-import { LoginProps } from "./Interfaces";
+import { IsignupFormData, LoginProps } from "./Interfaces";
 export const SignUp = ({ setLoggedIn }: LoginProps) => {
-	const [signUpFormData, setSignUpFormData] = useState({
+	const [signUpFormData, setSignUpFormData] = useState<IsignupFormData>({
 		email: "",
 		password: "",
 		duplicatePassword: "",
 	});
 	const [error, setError] = useState(null);
-	const [loading, setLoading] = useState(false);
+	const [loading, setLoading] = useState<boolean>(false);
 	const updateSignUpFormData = (event) => {
 		const keyToUpdate = event.target.name;
 		setSignUpFormData((currentInfo) => ({

@@ -4,7 +4,7 @@ import FAQ from "./FAQ";
 
 const FAQPage = () => {
 	const [query] = useSearchParams();
-	const isInstalled = query.get("installed");
+	const isInstalled:string = query.get("installed");
 
 	return (
 		<>

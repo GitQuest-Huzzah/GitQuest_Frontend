@@ -8,7 +8,7 @@ export const RenderThis = () => {
 		component: string;
 	}
 	const [query] = useSearchParams();
-	const decodeQuery = Buffer.from(query.toString(), "base64").toString("utf-8");
+	const decodeQuery:string = Buffer.from(query.toString(), "base64").toString("utf-8");
 	const parsedQuery: RenderThisType = JSON.parse(decodeQuery);
 
 	const cards = {

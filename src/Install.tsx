@@ -4,8 +4,8 @@ import emailjs from "@emailjs/browser";
 import Thanks from "./Thanks";
 
 const Install = () => {
-	const [emailSubmitted, setEmailSubmitted] = useState(false);
-	const [email, setEmail] = useState("");
+	const [emailSubmitted, setEmailSubmitted] = useState<boolean>(false);
+	const [email, setEmail] = useState<string>("");
 	const form = useRef();
 	const sendEmail = (e) => {
 		e.preventDefault();

@@ -39,3 +39,14 @@ export interface UserInfo {
 	gitHubLogin: string;
 	email?: string;
 }
+
+export interface IloginFormDate{
+	email: string;
+	password: string;
+}
+
+export interface IsignupFormData{
+	email:string;
+	password:string;
+	duplicatePassword:string;
+}

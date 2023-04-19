@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { FAQProps } from "./Interfaces";
 const FAQ = ({ question, answer }: FAQProps) => {
-	const [show, setShow] = useState(false);
+	const [show, setShow] = useState<boolean>(false);
 
 	return (
 		<div className="relative overflow-auto border-2 border-gray-400 rounded-lg">

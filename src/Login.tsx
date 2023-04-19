@@ -3,16 +3,16 @@ import { formGrid, inputClass, inputLabel, submitButton } from "./cssClasses";
 import { errorMessage } from "./cssClasses";
 import axios from "axios";
 import { SignUp } from "./SignUp";
-import { LoginProps } from "./Interfaces";
+import { IloginFormDate, LoginProps } from "./Interfaces";
 export const Login = ({ setLoggedIn }: LoginProps) => {
-	const [loading, setLoading] = useState(false);
-	const [loginFormData, setLoginFormData] = useState({
+	const [loading, setLoading] = useState<boolean>(false);
+	const [loginFormData, setLoginFormData] = useState<IloginFormDate>({
 		email: "",
 		password: "",
 	});
 	const [error, setError] = useState(null);
 	// to conditionally render signup or login based on state
-	const [signUp, setSignUp] = useState(false);
+	const [signUp, setSignUp] = useState<boolean>(false);
 
 	const handleSubmit = async (event) => {
 		setLoading(true);

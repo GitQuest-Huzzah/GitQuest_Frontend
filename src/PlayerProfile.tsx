@@ -15,7 +15,7 @@ export const PlayerProfile = ({
 	user,
 	xp,
 }: PlayerProfileProps) => {
-	const [fontSize, setFontSize] = useState("");
+	const [fontSize, setFontSize] = useState<string>("");
 
 	useEffect(() => {
 		const fontSizeClasses = [

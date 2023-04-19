@@ -6,7 +6,7 @@ import Navbar from "./Navbar";
 
 const App = () => {
 	const currentDarkModePreference: string = localStorage.getItem("darkMode");
-	const [darkMode, setDarkMode] = useState(
+	const [darkMode, setDarkMode] = useState<boolean>(
 		currentDarkModePreference === "true" ? true : false
 	);
 	useEffect(() => {
